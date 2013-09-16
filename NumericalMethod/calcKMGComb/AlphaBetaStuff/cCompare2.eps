@@ -1,0 +1,4729 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: cCompare2.eps
+%%Creator: gnuplot 4.4 patchlevel 3
+%%CreationDate: Mon Jul 15 23:04:33 2013
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 410 302
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following true/false flags may be edited by hand if desired.
+% The unit line width and grayscale image gamma correction may also be changed.
+%
+/Color true def
+/Blacktext false def
+/Solid false def
+/Dashlength 1 def
+/Landscape false def
+/Level1 false def
+/Rounded false def
+/ClipToBoundingBox false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+/Gamma 1.0 def
+%
+/vshift -46 def
+/dl1 {
+  10.0 Dashlength mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+Level1 {} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (cCompare2.eps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 4.4 patchlevel 3)
+  /Author (ejalbert)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Mon Jul 15 23:04:33 2013)
+  /DOCINFO pdfmark
+end
+} ifelse
+/doclip {
+  ClipToBoundingBox {
+    newpath 50 50 moveto 410 50 lineto 410 302 lineto 50 302 lineto closepath
+    clip
+  } if
+} def
+%
+% Gnuplot Prolog Version 4.4 (August 2010)
+%
+%/SuppressPDFMark true def
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/g {setgray} bind def
+/Gshow {show} def   % May be redefined later in the file to support UTF-8
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+3.8 setmiterlimit
+% Default Line colors
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default Line Types
+/LTw {PL [] 1 setgray} def
+/LTb {BL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [4 dl1 2 dl2] LC1 DL} def
+/LT2 {PL [2 dl1 3 dl2] LC2 DL} def
+/LT3 {PL [1 dl1 1.5 dl2] LC3 DL} def
+/LT4 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC5 DL} def
+/LT6 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 4 dl2] LC8 DL} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto gsave closepath fill grestore} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  gsave 1 setgray fill grestore clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+ 2 lt
+	{/InterpretLevel1 true def}
+	{/InterpretLevel1 Level1 def}
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {Gshow} {stringwidth pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get stringwidth pop -2 div
+     dup 0 R} {dup 6 get stringwidth pop -2 div 0 R 6 get
+     show 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} def
+/Gswidth {dup type /stringtype eq {stringwidth} {pop (n) stringwidth} ifelse} def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get Gswidth pop add} {pop} ifelse} ifelse} forall} def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
+end
+%%EndProlog
+gnudict begin
+gsave
+doclip
+50 50 translate
+0.050 0.050 scale
+0 setgray
+newpath
+(Helvetica) findfont 140 scalefont setfont
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+770 588 M
+63 0 V
+6114 0 R
+-63 0 V
+stroke
+686 588 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MRshow
+1.000 UL
+LTb
+770 1123 M
+63 0 V
+6114 0 R
+-63 0 V
+stroke
+686 1123 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.05)]
+] -46.7 MRshow
+1.000 UL
+LTb
+770 1659 M
+63 0 V
+6114 0 R
+-63 0 V
+stroke
+686 1659 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.1)]
+] -46.7 MRshow
+1.000 UL
+LTb
+770 2194 M
+63 0 V
+6114 0 R
+-63 0 V
+stroke
+686 2194 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.15)]
+] -46.7 MRshow
+1.000 UL
+LTb
+770 2730 M
+63 0 V
+6114 0 R
+-63 0 V
+stroke
+686 2730 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.2)]
+] -46.7 MRshow
+1.000 UL
+LTb
+770 3265 M
+63 0 V
+6114 0 R
+-63 0 V
+stroke
+686 3265 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.25)]
+] -46.7 MRshow
+1.000 UL
+LTb
+770 3800 M
+63 0 V
+6114 0 R
+-63 0 V
+stroke
+686 3800 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.3)]
+] -46.7 MRshow
+1.000 UL
+LTb
+770 4336 M
+63 0 V
+6114 0 R
+-63 0 V
+stroke
+686 4336 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.35)]
+] -46.7 MRshow
+1.000 UL
+LTb
+770 4871 M
+63 0 V
+6114 0 R
+-63 0 V
+stroke
+686 4871 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.4)]
+] -46.7 MRshow
+1.000 UL
+LTb
+770 588 M
+0 63 V
+0 4220 R
+0 -63 V
+stroke
+770 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MCshow
+1.000 UL
+LTb
+1388 588 M
+0 63 V
+0 4220 R
+0 -63 V
+stroke
+1388 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 50)]
+] -46.7 MCshow
+1.000 UL
+LTb
+2005 588 M
+0 63 V
+0 4220 R
+0 -63 V
+stroke
+2005 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 100)]
+] -46.7 MCshow
+1.000 UL
+LTb
+2623 588 M
+0 63 V
+0 4220 R
+0 -63 V
+stroke
+2623 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 150)]
+] -46.7 MCshow
+1.000 UL
+LTb
+3241 588 M
+0 63 V
+0 4220 R
+0 -63 V
+stroke
+3241 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 200)]
+] -46.7 MCshow
+1.000 UL
+LTb
+3858 588 M
+0 63 V
+0 4220 R
+0 -63 V
+stroke
+3858 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 250)]
+] -46.7 MCshow
+1.000 UL
+LTb
+4476 588 M
+0 63 V
+0 4220 R
+0 -63 V
+stroke
+4476 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 300)]
+] -46.7 MCshow
+1.000 UL
+LTb
+5094 588 M
+0 63 V
+0 4220 R
+0 -63 V
+stroke
+5094 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 350)]
+] -46.7 MCshow
+1.000 UL
+LTb
+5712 588 M
+0 63 V
+0 4220 R
+0 -63 V
+stroke
+5712 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 400)]
+] -46.7 MCshow
+1.000 UL
+LTb
+6329 588 M
+0 63 V
+0 4220 R
+0 -63 V
+stroke
+6329 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 450)]
+] -46.7 MCshow
+1.000 UL
+LTb
+6947 588 M
+0 63 V
+0 4220 R
+0 -63 V
+stroke
+6947 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 500)]
+] -46.7 MCshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+770 4871 N
+770 588 L
+6177 0 V
+0 4283 V
+-6177 0 V
+Z stroke
+LCb setrgbcolor
+112 2729 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (c)]
+[(Symbol) 112.0 -42.0 true true 0 (e)]
+] -32.7 MCshow
+grestore
+LTb
+LCb setrgbcolor
+3858 238 M
+[ [(Helvetica) 140.0 0.0 true true 0 (c)]
+[(Helvetica) 112.0 -42.0 true true 0 (crit)]
+] -32.7 MCshow
+LTb
+1.000 UP
+1.000 UL
+LTb
+% Begin plot #1
+1.000 UP
+1.000 UL
+LT0
+/Helvetica findfont 140 scalefont setfont
+LCb setrgbcolor
+6296 4738 M
+('cCompare2.dat' using 6:1) Rshow
+LT0
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 590 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 590 Pls
+770 592 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 591 Pls
+770 592 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 591 Pls
+770 592 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 591 Pls
+770 592 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 591 Pls
+770 592 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 600 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 600 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 600 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 601 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 601 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 591 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 591 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 602 Pls
+770 591 Pls
+770 593 Pls
+770 594 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 602 Pls
+770 591 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 591 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 591 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 591 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 591 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 591 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 603 Pls
+770 591 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 603 Pls
+770 591 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 592 Pls
+770 593 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 592 Pls
+770 593 Pls
+770 595 Pls
+770 596 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 592 Pls
+770 593 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 592 Pls
+770 593 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 592 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 605 Pls
+770 592 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 606 Pls
+770 592 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 606 Pls
+770 592 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 592 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 592 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 606 Pls
+770 592 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 607 Pls
+770 592 Pls
+770 594 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 607 Pls
+770 592 Pls
+770 594 Pls
+770 595 Pls
+770 597 Pls
+770 598 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 607 Pls
+770 607 Pls
+770 592 Pls
+770 594 Pls
+770 595 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 607 Pls
+770 607 Pls
+770 592 Pls
+770 594 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 606 Pls
+770 607 Pls
+770 607 Pls
+770 608 Pls
+770 592 Pls
+770 594 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 607 Pls
+770 607 Pls
+770 608 Pls
+770 592 Pls
+770 594 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 607 Pls
+770 608 Pls
+770 608 Pls
+770 593 Pls
+770 594 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 607 Pls
+770 607 Pls
+770 608 Pls
+770 608 Pls
+770 593 Pls
+770 594 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 607 Pls
+770 607 Pls
+770 608 Pls
+770 608 Pls
+770 593 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 606 Pls
+770 607 Pls
+770 607 Pls
+770 608 Pls
+770 608 Pls
+770 609 Pls
+770 593 Pls
+770 595 Pls
+770 596 Pls
+770 597 Pls
+770 599 Pls
+770 600 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 607 Pls
+770 607 Pls
+770 608 Pls
+770 608 Pls
+771 609 Pls
+770 593 Pls
+770 595 Pls
+770 596 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 607 Pls
+770 608 Pls
+770 608 Pls
+771 609 Pls
+771 609 Pls
+770 593 Pls
+770 595 Pls
+770 596 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 606 Pls
+770 607 Pls
+770 607 Pls
+770 608 Pls
+770 608 Pls
+771 609 Pls
+771 610 Pls
+770 593 Pls
+770 595 Pls
+770 596 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 607 Pls
+770 607 Pls
+770 608 Pls
+771 609 Pls
+771 609 Pls
+771 610 Pls
+770 593 Pls
+770 595 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 607 Pls
+770 608 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 610 Pls
+770 593 Pls
+770 595 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 606 Pls
+770 607 Pls
+770 607 Pls
+770 608 Pls
+771 609 Pls
+771 609 Pls
+771 610 Pls
+771 610 Pls
+770 593 Pls
+770 595 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 607 Pls
+770 608 Pls
+771 608 Pls
+771 609 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+770 593 Pls
+770 595 Pls
+770 597 Pls
+770 598 Pls
+770 599 Pls
+770 601 Pls
+770 602 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 607 Pls
+771 608 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 610 Pls
+771 611 Pls
+770 593 Pls
+770 595 Pls
+770 597 Pls
+770 598 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 604 Pls
+770 605 Pls
+770 606 Pls
+770 607 Pls
+770 607 Pls
+771 608 Pls
+771 609 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 611 Pls
+770 593 Pls
+770 595 Pls
+770 597 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 605 Pls
+770 606 Pls
+770 607 Pls
+771 608 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+770 593 Pls
+770 596 Pls
+770 597 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+770 607 Pls
+771 608 Pls
+771 609 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 611 Pls
+771 612 Pls
+770 593 Pls
+770 596 Pls
+770 597 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 606 Pls
+770 607 Pls
+771 607 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 612 Pls
+770 593 Pls
+770 596 Pls
+770 597 Pls
+770 599 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 606 Pls
+771 607 Pls
+771 608 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 611 Pls
+771 612 Pls
+771 612 Pls
+770 594 Pls
+770 596 Pls
+770 598 Pls
+770 599 Pls
+770 600 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 606 Pls
+770 606 Pls
+771 607 Pls
+771 608 Pls
+771 609 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 611 Pls
+771 612 Pls
+771 613 Pls
+770 594 Pls
+770 596 Pls
+770 598 Pls
+770 599 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 606 Pls
+770 607 Pls
+771 607 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 612 Pls
+771 613 Pls
+770 594 Pls
+770 596 Pls
+770 598 Pls
+770 599 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 606 Pls
+771 607 Pls
+771 608 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 611 Pls
+771 612 Pls
+771 613 Pls
+771 613 Pls
+770 594 Pls
+770 596 Pls
+770 598 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 606 Pls
+771 607 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 612 Pls
+771 613 Pls
+771 614 Pls
+770 594 Pls
+770 596 Pls
+770 598 Pls
+770 600 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 605 Pls
+770 606 Pls
+771 606 Pls
+771 607 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 611 Pls
+771 612 Pls
+771 613 Pls
+771 613 Pls
+771 614 Pls
+770 594 Pls
+770 596 Pls
+770 598 Pls
+770 600 Pls
+770 601 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 606 Pls
+771 607 Pls
+771 608 Pls
+771 609 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 612 Pls
+771 613 Pls
+771 614 Pls
+771 614 Pls
+770 594 Pls
+770 596 Pls
+770 598 Pls
+770 600 Pls
+770 601 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+770 606 Pls
+771 607 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 613 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+770 594 Pls
+770 597 Pls
+770 599 Pls
+770 600 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+771 606 Pls
+771 607 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 612 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+771 615 Pls
+770 594 Pls
+770 597 Pls
+770 599 Pls
+770 600 Pls
+770 602 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+771 607 Pls
+771 608 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 613 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+771 616 Pls
+770 594 Pls
+770 597 Pls
+770 599 Pls
+770 601 Pls
+770 602 Pls
+770 603 Pls
+770 605 Pls
+770 606 Pls
+771 607 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 611 Pls
+771 612 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+771 615 Pls
+771 616 Pls
+770 594 Pls
+770 597 Pls
+770 599 Pls
+770 601 Pls
+770 602 Pls
+770 604 Pls
+770 605 Pls
+771 606 Pls
+771 607 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 613 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+771 616 Pls
+771 616 Pls
+770 594 Pls
+770 597 Pls
+770 599 Pls
+770 601 Pls
+770 602 Pls
+770 604 Pls
+770 605 Pls
+771 606 Pls
+771 607 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+771 615 Pls
+771 616 Pls
+771 617 Pls
+770 595 Pls
+770 597 Pls
+770 599 Pls
+770 601 Pls
+770 603 Pls
+770 604 Pls
+770 605 Pls
+771 606 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 612 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+771 616 Pls
+771 617 Pls
+771 617 Pls
+770 595 Pls
+770 597 Pls
+770 599 Pls
+770 601 Pls
+770 603 Pls
+770 604 Pls
+770 606 Pls
+771 607 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+771 615 Pls
+771 616 Pls
+771 617 Pls
+771 618 Pls
+770 595 Pls
+770 598 Pls
+770 600 Pls
+770 601 Pls
+770 603 Pls
+770 604 Pls
+770 606 Pls
+771 607 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+771 616 Pls
+771 617 Pls
+771 617 Pls
+771 618 Pls
+770 595 Pls
+770 598 Pls
+770 600 Pls
+770 602 Pls
+770 603 Pls
+770 605 Pls
+771 606 Pls
+771 607 Pls
+771 608 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 613 Pls
+771 614 Pls
+771 614 Pls
+771 615 Pls
+771 616 Pls
+771 617 Pls
+771 618 Pls
+771 619 Pls
+770 595 Pls
+770 598 Pls
+770 600 Pls
+770 602 Pls
+770 604 Pls
+770 605 Pls
+771 606 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+771 616 Pls
+771 617 Pls
+771 617 Pls
+771 618 Pls
+771 619 Pls
+770 595 Pls
+770 598 Pls
+770 600 Pls
+770 602 Pls
+770 604 Pls
+770 605 Pls
+771 607 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+771 616 Pls
+771 617 Pls
+771 618 Pls
+771 619 Pls
+771 619 Pls
+770 595 Pls
+770 598 Pls
+770 600 Pls
+770 602 Pls
+770 604 Pls
+770 606 Pls
+771 607 Pls
+771 608 Pls
+771 609 Pls
+771 611 Pls
+771 612 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+771 616 Pls
+771 617 Pls
+771 617 Pls
+771 618 Pls
+771 619 Pls
+771 620 Pls
+770 595 Pls
+770 598 Pls
+770 601 Pls
+770 603 Pls
+770 604 Pls
+770 606 Pls
+771 607 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+771 616 Pls
+771 617 Pls
+771 618 Pls
+771 619 Pls
+771 620 Pls
+771 620 Pls
+770 595 Pls
+770 598 Pls
+770 601 Pls
+770 603 Pls
+770 604 Pls
+770 606 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 614 Pls
+771 615 Pls
+771 616 Pls
+771 617 Pls
+771 617 Pls
+771 618 Pls
+771 619 Pls
+771 620 Pls
+771 621 Pls
+770 595 Pls
+770 599 Pls
+770 601 Pls
+770 603 Pls
+770 605 Pls
+771 606 Pls
+771 608 Pls
+771 609 Pls
+771 610 Pls
+771 612 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+771 616 Pls
+771 617 Pls
+771 618 Pls
+771 619 Pls
+771 620 Pls
+771 621 Pls
+771 621 Pls
+770 596 Pls
+770 599 Pls
+770 601 Pls
+770 603 Pls
+770 605 Pls
+771 607 Pls
+771 608 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+771 616 Pls
+771 617 Pls
+771 618 Pls
+771 619 Pls
+771 620 Pls
+771 621 Pls
+771 622 Pls
+770 596 Pls
+770 599 Pls
+770 601 Pls
+770 603 Pls
+770 605 Pls
+771 607 Pls
+771 608 Pls
+771 610 Pls
+771 611 Pls
+771 612 Pls
+771 614 Pls
+771 615 Pls
+771 616 Pls
+771 617 Pls
+771 618 Pls
+771 619 Pls
+771 620 Pls
+771 621 Pls
+771 622 Pls
+771 623 Pls
+770 596 Pls
+770 599 Pls
+770 602 Pls
+770 604 Pls
+770 606 Pls
+771 607 Pls
+771 609 Pls
+771 610 Pls
+771 612 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+771 616 Pls
+771 617 Pls
+771 618 Pls
+771 619 Pls
+771 620 Pls
+771 621 Pls
+771 622 Pls
+771 623 Pls
+770 596 Pls
+770 599 Pls
+770 602 Pls
+770 604 Pls
+770 606 Pls
+771 608 Pls
+771 609 Pls
+771 611 Pls
+771 612 Pls
+771 613 Pls
+771 614 Pls
+771 616 Pls
+771 617 Pls
+771 618 Pls
+771 619 Pls
+771 620 Pls
+771 621 Pls
+771 622 Pls
+771 623 Pls
+771 624 Pls
+770 596 Pls
+770 599 Pls
+770 602 Pls
+770 604 Pls
+770 606 Pls
+771 608 Pls
+771 609 Pls
+771 611 Pls
+771 612 Pls
+771 614 Pls
+771 615 Pls
+771 616 Pls
+771 617 Pls
+771 618 Pls
+771 619 Pls
+771 620 Pls
+771 621 Pls
+771 622 Pls
+771 623 Pls
+771 624 Pls
+770 596 Pls
+770 600 Pls
+770 602 Pls
+770 605 Pls
+770 606 Pls
+771 608 Pls
+771 610 Pls
+771 611 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+771 617 Pls
+771 618 Pls
+771 619 Pls
+771 620 Pls
+771 621 Pls
+771 622 Pls
+771 623 Pls
+771 624 Pls
+771 625 Pls
+770 596 Pls
+770 600 Pls
+770 603 Pls
+770 605 Pls
+770 607 Pls
+771 609 Pls
+771 610 Pls
+771 612 Pls
+771 613 Pls
+771 615 Pls
+771 616 Pls
+771 617 Pls
+771 618 Pls
+771 619 Pls
+771 621 Pls
+771 622 Pls
+771 623 Pls
+771 624 Pls
+771 625 Pls
+771 626 Pls
+770 597 Pls
+770 600 Pls
+770 603 Pls
+770 605 Pls
+770 607 Pls
+771 609 Pls
+771 611 Pls
+771 612 Pls
+771 614 Pls
+771 615 Pls
+771 616 Pls
+771 618 Pls
+771 619 Pls
+771 620 Pls
+771 621 Pls
+771 622 Pls
+771 623 Pls
+771 624 Pls
+771 625 Pls
+771 626 Pls
+770 597 Pls
+770 600 Pls
+770 603 Pls
+770 605 Pls
+771 607 Pls
+771 609 Pls
+771 611 Pls
+771 613 Pls
+771 614 Pls
+771 615 Pls
+771 617 Pls
+771 618 Pls
+771 619 Pls
+771 621 Pls
+771 622 Pls
+771 623 Pls
+771 624 Pls
+771 625 Pls
+771 626 Pls
+771 627 Pls
+770 597 Pls
+770 601 Pls
+770 603 Pls
+770 606 Pls
+771 608 Pls
+771 610 Pls
+771 611 Pls
+771 613 Pls
+771 615 Pls
+771 616 Pls
+771 617 Pls
+771 619 Pls
+771 620 Pls
+771 621 Pls
+771 622 Pls
+771 623 Pls
+771 624 Pls
+771 626 Pls
+771 627 Pls
+771 628 Pls
+770 597 Pls
+770 601 Pls
+770 604 Pls
+770 606 Pls
+771 608 Pls
+771 610 Pls
+771 612 Pls
+771 613 Pls
+771 615 Pls
+771 616 Pls
+771 618 Pls
+771 619 Pls
+771 620 Pls
+771 622 Pls
+771 623 Pls
+771 624 Pls
+771 625 Pls
+771 626 Pls
+771 627 Pls
+771 628 Pls
+770 597 Pls
+770 601 Pls
+770 604 Pls
+770 606 Pls
+771 608 Pls
+771 610 Pls
+771 612 Pls
+771 614 Pls
+771 615 Pls
+771 617 Pls
+771 618 Pls
+771 620 Pls
+771 621 Pls
+771 622 Pls
+771 623 Pls
+771 625 Pls
+771 626 Pls
+771 627 Pls
+771 628 Pls
+771 629 Pls
+770 597 Pls
+770 601 Pls
+770 604 Pls
+770 607 Pls
+771 609 Pls
+771 611 Pls
+771 613 Pls
+771 614 Pls
+771 616 Pls
+771 617 Pls
+771 619 Pls
+771 620 Pls
+771 622 Pls
+771 623 Pls
+771 624 Pls
+771 625 Pls
+771 626 Pls
+771 628 Pls
+771 629 Pls
+771 630 Pls
+770 597 Pls
+770 601 Pls
+770 604 Pls
+770 607 Pls
+771 609 Pls
+771 611 Pls
+771 613 Pls
+771 615 Pls
+771 616 Pls
+771 618 Pls
+771 619 Pls
+771 621 Pls
+771 622 Pls
+771 624 Pls
+771 625 Pls
+771 626 Pls
+771 627 Pls
+771 628 Pls
+771 629 Pls
+771 630 Pls
+770 598 Pls
+770 602 Pls
+770 605 Pls
+770 607 Pls
+771 610 Pls
+771 612 Pls
+771 614 Pls
+771 615 Pls
+771 617 Pls
+771 619 Pls
+771 620 Pls
+771 621 Pls
+771 623 Pls
+771 624 Pls
+771 625 Pls
+771 627 Pls
+771 628 Pls
+771 629 Pls
+771 630 Pls
+771 631 Pls
+770 598 Pls
+770 602 Pls
+770 605 Pls
+770 608 Pls
+771 610 Pls
+771 612 Pls
+771 614 Pls
+771 616 Pls
+771 618 Pls
+771 619 Pls
+771 621 Pls
+771 622 Pls
+771 624 Pls
+771 625 Pls
+771 626 Pls
+771 627 Pls
+771 629 Pls
+771 630 Pls
+771 631 Pls
+771 632 Pls
+770 598 Pls
+770 602 Pls
+770 605 Pls
+770 608 Pls
+771 610 Pls
+771 613 Pls
+771 615 Pls
+771 616 Pls
+771 618 Pls
+771 620 Pls
+771 621 Pls
+771 623 Pls
+771 624 Pls
+771 626 Pls
+771 627 Pls
+771 628 Pls
+771 629 Pls
+771 631 Pls
+771 632 Pls
+771 633 Pls
+770 598 Pls
+770 602 Pls
+770 606 Pls
+770 608 Pls
+771 611 Pls
+771 613 Pls
+771 615 Pls
+771 617 Pls
+771 619 Pls
+771 620 Pls
+771 622 Pls
+771 623 Pls
+771 625 Pls
+771 626 Pls
+771 628 Pls
+771 629 Pls
+771 630 Pls
+771 631 Pls
+771 633 Pls
+771 634 Pls
+770 598 Pls
+770 603 Pls
+770 606 Pls
+770 609 Pls
+771 611 Pls
+771 614 Pls
+771 616 Pls
+771 618 Pls
+771 619 Pls
+771 621 Pls
+771 623 Pls
+771 624 Pls
+771 626 Pls
+771 627 Pls
+771 628 Pls
+771 630 Pls
+771 631 Pls
+771 632 Pls
+771 633 Pls
+771 635 Pls
+770 599 Pls
+770 603 Pls
+770 606 Pls
+770 609 Pls
+771 612 Pls
+771 614 Pls
+771 616 Pls
+771 618 Pls
+771 620 Pls
+771 622 Pls
+771 623 Pls
+771 625 Pls
+771 626 Pls
+771 628 Pls
+771 629 Pls
+771 631 Pls
+771 632 Pls
+771 633 Pls
+771 634 Pls
+771 636 Pls
+770 599 Pls
+770 603 Pls
+770 607 Pls
+770 610 Pls
+771 612 Pls
+771 615 Pls
+771 617 Pls
+771 619 Pls
+771 621 Pls
+771 622 Pls
+771 624 Pls
+771 626 Pls
+771 627 Pls
+771 629 Pls
+771 630 Pls
+771 631 Pls
+771 633 Pls
+771 634 Pls
+771 635 Pls
+771 637 Pls
+770 599 Pls
+771 604 Pls
+771 607 Pls
+771 610 Pls
+771 613 Pls
+771 615 Pls
+771 617 Pls
+771 619 Pls
+771 621 Pls
+771 623 Pls
+772 625 Pls
+772 626 Pls
+772 628 Pls
+772 629 Pls
+772 631 Pls
+772 632 Pls
+772 634 Pls
+772 635 Pls
+772 636 Pls
+772 638 Pls
+770 599 Pls
+771 604 Pls
+771 608 Pls
+771 611 Pls
+771 613 Pls
+771 616 Pls
+771 618 Pls
+771 620 Pls
+771 622 Pls
+772 624 Pls
+772 625 Pls
+772 627 Pls
+772 629 Pls
+772 630 Pls
+772 632 Pls
+772 633 Pls
+772 635 Pls
+772 636 Pls
+772 637 Pls
+772 639 Pls
+771 600 Pls
+771 604 Pls
+771 608 Pls
+771 611 Pls
+771 614 Pls
+771 616 Pls
+771 619 Pls
+771 621 Pls
+772 623 Pls
+772 624 Pls
+772 626 Pls
+772 628 Pls
+772 630 Pls
+772 631 Pls
+772 633 Pls
+772 634 Pls
+772 636 Pls
+772 637 Pls
+772 638 Pls
+772 640 Pls
+771 600 Pls
+771 605 Pls
+771 608 Pls
+771 612 Pls
+771 614 Pls
+771 617 Pls
+771 619 Pls
+771 621 Pls
+772 623 Pls
+772 625 Pls
+772 627 Pls
+772 629 Pls
+772 630 Pls
+772 632 Pls
+772 634 Pls
+772 635 Pls
+772 637 Pls
+772 638 Pls
+772 639 Pls
+772 641 Pls
+771 600 Pls
+771 605 Pls
+771 609 Pls
+771 612 Pls
+771 615 Pls
+771 617 Pls
+771 620 Pls
+772 622 Pls
+772 624 Pls
+772 626 Pls
+772 628 Pls
+772 630 Pls
+772 631 Pls
+772 633 Pls
+772 635 Pls
+772 636 Pls
+772 638 Pls
+772 639 Pls
+772 640 Pls
+772 642 Pls
+771 600 Pls
+771 605 Pls
+771 609 Pls
+771 613 Pls
+771 615 Pls
+771 618 Pls
+771 621 Pls
+772 623 Pls
+772 625 Pls
+772 627 Pls
+772 629 Pls
+772 631 Pls
+772 632 Pls
+772 634 Pls
+772 636 Pls
+772 637 Pls
+772 639 Pls
+772 640 Pls
+772 642 Pls
+773 643 Pls
+771 601 Pls
+771 606 Pls
+771 610 Pls
+771 613 Pls
+771 616 Pls
+771 619 Pls
+772 621 Pls
+772 624 Pls
+772 626 Pls
+772 628 Pls
+772 630 Pls
+772 632 Pls
+772 633 Pls
+772 635 Pls
+772 637 Pls
+772 638 Pls
+772 640 Pls
+772 641 Pls
+773 643 Pls
+773 644 Pls
+771 601 Pls
+771 606 Pls
+771 610 Pls
+771 614 Pls
+771 617 Pls
+771 619 Pls
+772 622 Pls
+772 624 Pls
+772 627 Pls
+772 629 Pls
+772 631 Pls
+772 633 Pls
+772 634 Pls
+772 636 Pls
+772 638 Pls
+772 639 Pls
+773 641 Pls
+773 643 Pls
+773 644 Pls
+773 645 Pls
+771 601 Pls
+771 607 Pls
+771 611 Pls
+771 614 Pls
+771 617 Pls
+772 620 Pls
+772 623 Pls
+772 625 Pls
+772 627 Pls
+772 630 Pls
+772 632 Pls
+772 634 Pls
+772 635 Pls
+772 637 Pls
+772 639 Pls
+773 641 Pls
+773 642 Pls
+773 644 Pls
+773 645 Pls
+773 647 Pls
+771 601 Pls
+771 607 Pls
+771 611 Pls
+771 615 Pls
+771 618 Pls
+772 621 Pls
+772 624 Pls
+772 626 Pls
+772 628 Pls
+772 631 Pls
+772 633 Pls
+772 635 Pls
+772 636 Pls
+772 638 Pls
+773 640 Pls
+773 642 Pls
+773 643 Pls
+773 645 Pls
+773 647 Pls
+773 648 Pls
+771 602 Pls
+771 607 Pls
+771 612 Pls
+771 616 Pls
+772 619 Pls
+772 622 Pls
+772 624 Pls
+772 627 Pls
+772 629 Pls
+772 632 Pls
+772 634 Pls
+772 636 Pls
+772 638 Pls
+773 640 Pls
+773 641 Pls
+773 643 Pls
+773 645 Pls
+773 646 Pls
+773 648 Pls
+773 650 Pls
+771 602 Pls
+771 608 Pls
+771 612 Pls
+771 616 Pls
+772 620 Pls
+772 623 Pls
+772 625 Pls
+772 628 Pls
+772 630 Pls
+772 633 Pls
+772 635 Pls
+772 637 Pls
+773 639 Pls
+773 641 Pls
+773 643 Pls
+773 644 Pls
+773 646 Pls
+773 648 Pls
+773 649 Pls
+773 651 Pls
+771 602 Pls
+771 608 Pls
+771 613 Pls
+771 617 Pls
+772 620 Pls
+772 623 Pls
+772 626 Pls
+772 629 Pls
+772 631 Pls
+772 634 Pls
+772 636 Pls
+773 638 Pls
+773 640 Pls
+773 642 Pls
+773 644 Pls
+773 646 Pls
+773 648 Pls
+773 649 Pls
+773 651 Pls
+773 653 Pls
+771 603 Pls
+771 609 Pls
+771 614 Pls
+772 618 Pls
+772 621 Pls
+772 624 Pls
+772 627 Pls
+772 630 Pls
+772 632 Pls
+772 635 Pls
+773 637 Pls
+773 639 Pls
+773 641 Pls
+773 643 Pls
+773 645 Pls
+773 647 Pls
+773 649 Pls
+773 651 Pls
+773 652 Pls
+773 654 Pls
+771 603 Pls
+771 609 Pls
+771 614 Pls
+772 618 Pls
+772 622 Pls
+772 625 Pls
+772 628 Pls
+772 631 Pls
+772 634 Pls
+773 636 Pls
+773 638 Pls
+773 641 Pls
+773 643 Pls
+773 645 Pls
+773 647 Pls
+773 649 Pls
+773 651 Pls
+773 652 Pls
+773 654 Pls
+774 656 Pls
+771 604 Pls
+771 610 Pls
+771 615 Pls
+772 619 Pls
+772 623 Pls
+772 626 Pls
+772 629 Pls
+772 632 Pls
+772 635 Pls
+773 637 Pls
+773 640 Pls
+773 642 Pls
+773 644 Pls
+773 646 Pls
+773 648 Pls
+773 650 Pls
+773 652 Pls
+773 654 Pls
+774 656 Pls
+774 658 Pls
+771 604 Pls
+771 611 Pls
+771 616 Pls
+772 620 Pls
+772 624 Pls
+772 627 Pls
+772 630 Pls
+772 633 Pls
+773 636 Pls
+773 639 Pls
+773 641 Pls
+773 643 Pls
+773 646 Pls
+773 648 Pls
+773 650 Pls
+773 652 Pls
+773 654 Pls
+774 656 Pls
+774 658 Pls
+774 659 Pls
+771 604 Pls
+771 611 Pls
+772 616 Pls
+772 621 Pls
+772 625 Pls
+772 628 Pls
+772 631 Pls
+772 634 Pls
+773 637 Pls
+773 640 Pls
+773 642 Pls
+773 645 Pls
+773 647 Pls
+773 649 Pls
+773 652 Pls
+773 654 Pls
+774 656 Pls
+774 658 Pls
+774 659 Pls
+774 661 Pls
+771 605 Pls
+771 612 Pls
+772 617 Pls
+772 622 Pls
+772 626 Pls
+772 629 Pls
+772 633 Pls
+773 636 Pls
+773 639 Pls
+773 641 Pls
+773 644 Pls
+773 646 Pls
+773 649 Pls
+773 651 Pls
+773 653 Pls
+774 655 Pls
+774 657 Pls
+774 659 Pls
+774 661 Pls
+774 663 Pls
+771 605 Pls
+771 612 Pls
+772 618 Pls
+772 623 Pls
+772 627 Pls
+772 630 Pls
+772 634 Pls
+773 637 Pls
+773 640 Pls
+773 643 Pls
+773 645 Pls
+773 648 Pls
+773 650 Pls
+773 653 Pls
+774 655 Pls
+774 657 Pls
+774 659 Pls
+774 661 Pls
+774 663 Pls
+774 665 Pls
+771 606 Pls
+771 613 Pls
+772 619 Pls
+772 624 Pls
+772 628 Pls
+772 632 Pls
+772 635 Pls
+773 638 Pls
+773 641 Pls
+773 644 Pls
+773 647 Pls
+773 650 Pls
+773 652 Pls
+774 655 Pls
+774 657 Pls
+774 659 Pls
+774 661 Pls
+774 664 Pls
+774 666 Pls
+774 668 Pls
+771 606 Pls
+771 614 Pls
+772 620 Pls
+772 625 Pls
+772 629 Pls
+772 633 Pls
+773 636 Pls
+773 640 Pls
+773 643 Pls
+773 646 Pls
+773 649 Pls
+773 651 Pls
+773 654 Pls
+774 657 Pls
+774 659 Pls
+774 661 Pls
+774 664 Pls
+774 666 Pls
+774 668 Pls
+774 670 Pls
+771 607 Pls
+771 615 Pls
+772 621 Pls
+772 626 Pls
+772 630 Pls
+772 634 Pls
+773 638 Pls
+773 641 Pls
+773 645 Pls
+773 648 Pls
+773 651 Pls
+773 653 Pls
+774 656 Pls
+774 659 Pls
+774 661 Pls
+774 663 Pls
+774 666 Pls
+774 668 Pls
+774 670 Pls
+774 672 Pls
+771 607 Pls
+771 616 Pls
+772 622 Pls
+772 627 Pls
+772 631 Pls
+772 636 Pls
+773 639 Pls
+773 643 Pls
+773 646 Pls
+773 649 Pls
+773 653 Pls
+773 655 Pls
+774 658 Pls
+774 661 Pls
+774 663 Pls
+774 666 Pls
+774 668 Pls
+774 671 Pls
+774 673 Pls
+774 675 Pls
+771 608 Pls
+771 616 Pls
+772 623 Pls
+772 628 Pls
+772 633 Pls
+772 637 Pls
+773 641 Pls
+773 645 Pls
+773 648 Pls
+773 651 Pls
+773 655 Pls
+774 657 Pls
+774 660 Pls
+774 663 Pls
+774 666 Pls
+774 668 Pls
+774 671 Pls
+774 673 Pls
+774 675 Pls
+775 678 Pls
+771 609 Pls
+771 617 Pls
+772 624 Pls
+772 629 Pls
+772 634 Pls
+773 639 Pls
+773 643 Pls
+773 647 Pls
+773 650 Pls
+773 653 Pls
+773 657 Pls
+774 660 Pls
+774 663 Pls
+774 665 Pls
+774 668 Pls
+774 671 Pls
+774 673 Pls
+774 676 Pls
+775 678 Pls
+775 681 Pls
+771 609 Pls
+771 618 Pls
+772 625 Pls
+772 631 Pls
+772 636 Pls
+773 640 Pls
+773 645 Pls
+773 648 Pls
+773 652 Pls
+773 656 Pls
+773 659 Pls
+774 662 Pls
+774 665 Pls
+774 668 Pls
+774 671 Pls
+774 673 Pls
+774 676 Pls
+774 679 Pls
+775 681 Pls
+775 684 Pls
+771 610 Pls
+772 619 Pls
+772 626 Pls
+772 632 Pls
+772 637 Pls
+773 642 Pls
+773 646 Pls
+773 650 Pls
+773 654 Pls
+773 658 Pls
+774 661 Pls
+774 665 Pls
+774 668 Pls
+774 671 Pls
+774 674 Pls
+774 676 Pls
+774 679 Pls
+775 682 Pls
+775 684 Pls
+775 687 Pls
+771 611 Pls
+772 620 Pls
+772 628 Pls
+772 634 Pls
+772 639 Pls
+773 644 Pls
+773 648 Pls
+773 653 Pls
+773 657 Pls
+773 660 Pls
+774 664 Pls
+774 667 Pls
+774 670 Pls
+774 674 Pls
+774 677 Pls
+774 679 Pls
+774 682 Pls
+775 685 Pls
+775 688 Pls
+775 690 Pls
+771 612 Pls
+772 621 Pls
+772 629 Pls
+772 635 Pls
+772 641 Pls
+773 646 Pls
+773 651 Pls
+773 655 Pls
+773 659 Pls
+774 663 Pls
+774 666 Pls
+774 670 Pls
+774 673 Pls
+774 677 Pls
+774 680 Pls
+774 683 Pls
+775 686 Pls
+775 688 Pls
+775 691 Pls
+775 694 Pls
+771 613 Pls
+772 623 Pls
+772 630 Pls
+772 637 Pls
+773 643 Pls
+773 648 Pls
+773 653 Pls
+773 657 Pls
+773 662 Pls
+774 666 Pls
+774 669 Pls
+774 673 Pls
+774 676 Pls
+774 680 Pls
+774 683 Pls
+774 686 Pls
+775 689 Pls
+775 692 Pls
+775 695 Pls
+775 698 Pls
+772 613 Pls
+773 624 Pls
+774 632 Pls
+774 639 Pls
+775 645 Pls
+775 650 Pls
+775 655 Pls
+776 660 Pls
+776 664 Pls
+777 668 Pls
+777 672 Pls
+777 676 Pls
+777 680 Pls
+778 683 Pls
+778 687 Pls
+778 690 Pls
+779 693 Pls
+779 696 Pls
+779 699 Pls
+779 702 Pls
+772 614 Pls
+773 625 Pls
+774 634 Pls
+774 641 Pls
+775 647 Pls
+775 653 Pls
+776 658 Pls
+776 663 Pls
+777 667 Pls
+777 672 Pls
+777 676 Pls
+778 680 Pls
+778 683 Pls
+778 687 Pls
+779 690 Pls
+779 694 Pls
+779 697 Pls
+779 700 Pls
+780 703 Pls
+780 706 Pls
+772 615 Pls
+773 627 Pls
+774 636 Pls
+775 643 Pls
+775 649 Pls
+776 655 Pls
+776 661 Pls
+777 666 Pls
+777 670 Pls
+778 675 Pls
+778 679 Pls
+778 683 Pls
+779 687 Pls
+779 691 Pls
+779 694 Pls
+780 698 Pls
+780 701 Pls
+780 705 Pls
+780 708 Pls
+781 711 Pls
+773 617 Pls
+774 628 Pls
+774 638 Pls
+775 645 Pls
+776 652 Pls
+776 658 Pls
+777 664 Pls
+777 669 Pls
+778 674 Pls
+778 679 Pls
+779 683 Pls
+779 687 Pls
+779 691 Pls
+780 695 Pls
+780 699 Pls
+780 703 Pls
+781 706 Pls
+781 709 Pls
+781 713 Pls
+782 716 Pls
+773 618 Pls
+774 630 Pls
+775 640 Pls
+776 648 Pls
+776 655 Pls
+777 661 Pls
+777 667 Pls
+778 672 Pls
+778 678 Pls
+779 682 Pls
+779 687 Pls
+780 691 Pls
+780 696 Pls
+780 700 Pls
+781 704 Pls
+781 707 Pls
+782 711 Pls
+782 715 Pls
+782 718 Pls
+783 722 Pls
+773 619 Pls
+774 632 Pls
+775 642 Pls
+776 650 Pls
+777 658 Pls
+777 664 Pls
+778 671 Pls
+779 676 Pls
+779 682 Pls
+780 687 Pls
+780 691 Pls
+781 696 Pls
+781 700 Pls
+781 705 Pls
+782 709 Pls
+782 713 Pls
+783 717 Pls
+783 720 Pls
+783 724 Pls
+784 727 Pls
+773 621 Pls
+775 634 Pls
+776 645 Pls
+777 653 Pls
+777 661 Pls
+778 668 Pls
+779 674 Pls
+779 680 Pls
+780 686 Pls
+780 691 Pls
+781 696 Pls
+781 701 Pls
+782 706 Pls
+782 710 Pls
+783 714 Pls
+783 718 Pls
+783 723 Pls
+784 726 Pls
+784 730 Pls
+785 734 Pls
+773 622 Pls
+775 636 Pls
+776 647 Pls
+777 656 Pls
+778 664 Pls
+779 672 Pls
+779 678 Pls
+780 685 Pls
+780 691 Pls
+781 696 Pls
+782 701 Pls
+782 706 Pls
+783 711 Pls
+783 716 Pls
+783 720 Pls
+784 725 Pls
+784 729 Pls
+785 733 Pls
+785 737 Pls
+786 741 Pls
+774 624 Pls
+775 639 Pls
+776 650 Pls
+777 660 Pls
+778 668 Pls
+779 676 Pls
+780 683 Pls
+780 690 Pls
+781 696 Pls
+782 702 Pls
+782 707 Pls
+783 712 Pls
+783 717 Pls
+784 722 Pls
+784 727 Pls
+785 732 Pls
+785 736 Pls
+786 740 Pls
+786 744 Pls
+786 749 Pls
+774 626 Pls
+775 641 Pls
+777 653 Pls
+778 664 Pls
+779 672 Pls
+779 681 Pls
+780 688 Pls
+781 695 Pls
+782 701 Pls
+782 707 Pls
+783 713 Pls
+783 719 Pls
+784 724 Pls
+785 729 Pls
+785 734 Pls
+786 739 Pls
+786 744 Pls
+786 748 Pls
+787 753 Pls
+787 757 Pls
+774 628 Pls
+776 644 Pls
+777 657 Pls
+778 668 Pls
+779 677 Pls
+780 686 Pls
+781 693 Pls
+781 701 Pls
+782 707 Pls
+783 714 Pls
+783 720 Pls
+784 726 Pls
+785 732 Pls
+785 737 Pls
+786 742 Pls
+786 747 Pls
+787 752 Pls
+787 757 Pls
+788 762 Pls
+788 766 Pls
+774 630 Pls
+776 648 Pls
+777 661 Pls
+778 672 Pls
+779 682 Pls
+780 691 Pls
+781 699 Pls
+782 707 Pls
+783 714 Pls
+783 721 Pls
+784 728 Pls
+785 734 Pls
+785 740 Pls
+786 746 Pls
+786 751 Pls
+787 756 Pls
+787 762 Pls
+788 767 Pls
+788 772 Pls
+789 776 Pls
+774 633 Pls
+776 651 Pls
+778 665 Pls
+779 677 Pls
+780 688 Pls
+781 697 Pls
+782 706 Pls
+782 714 Pls
+783 722 Pls
+784 729 Pls
+785 736 Pls
+785 743 Pls
+786 749 Pls
+786 755 Pls
+787 761 Pls
+788 767 Pls
+788 772 Pls
+789 777 Pls
+789 783 Pls
+790 788 Pls
+775 635 Pls
+776 655 Pls
+778 670 Pls
+779 683 Pls
+780 694 Pls
+781 704 Pls
+782 714 Pls
+783 722 Pls
+784 730 Pls
+784 738 Pls
+785 745 Pls
+786 752 Pls
+786 759 Pls
+787 766 Pls
+788 772 Pls
+788 778 Pls
+789 784 Pls
+789 789 Pls
+790 795 Pls
+790 800 Pls
+775 639 Pls
+777 660 Pls
+778 676 Pls
+779 689 Pls
+781 701 Pls
+782 712 Pls
+782 722 Pls
+783 731 Pls
+784 740 Pls
+785 748 Pls
+786 756 Pls
+786 763 Pls
+787 771 Pls
+788 778 Pls
+788 784 Pls
+789 791 Pls
+789 797 Pls
+790 803 Pls
+791 809 Pls
+791 815 Pls
+779 642 Pls
+782 665 Pls
+785 682 Pls
+787 697 Pls
+789 709 Pls
+791 721 Pls
+793 732 Pls
+794 742 Pls
+796 751 Pls
+797 760 Pls
+798 768 Pls
+800 776 Pls
+801 784 Pls
+802 791 Pls
+803 798 Pls
+804 805 Pls
+805 812 Pls
+806 818 Pls
+807 825 Pls
+808 831 Pls
+780 646 Pls
+784 671 Pls
+787 689 Pls
+790 705 Pls
+792 719 Pls
+794 731 Pls
+796 743 Pls
+798 753 Pls
+800 763 Pls
+801 773 Pls
+803 782 Pls
+804 790 Pls
+806 799 Pls
+807 807 Pls
+808 814 Pls
+810 822 Pls
+811 829 Pls
+812 836 Pls
+813 843 Pls
+814 849 Pls
+782 651 Pls
+786 677 Pls
+790 697 Pls
+793 714 Pls
+796 729 Pls
+798 743 Pls
+800 755 Pls
+803 767 Pls
+805 778 Pls
+806 788 Pls
+808 798 Pls
+810 807 Pls
+812 816 Pls
+813 824 Pls
+815 833 Pls
+816 841 Pls
+818 849 Pls
+819 856 Pls
+820 863 Pls
+822 871 Pls
+783 657 Pls
+789 685 Pls
+793 707 Pls
+797 726 Pls
+800 742 Pls
+803 756 Pls
+806 770 Pls
+808 782 Pls
+810 794 Pls
+812 805 Pls
+815 816 Pls
+817 826 Pls
+818 836 Pls
+820 845 Pls
+822 854 Pls
+824 863 Pls
+825 872 Pls
+827 880 Pls
+829 888 Pls
+830 896 Pls
+785 663 Pls
+791 695 Pls
+796 719 Pls
+800 739 Pls
+804 757 Pls
+807 773 Pls
+810 787 Pls
+813 801 Pls
+815 814 Pls
+818 826 Pls
+820 838 Pls
+823 849 Pls
+825 860 Pls
+827 870 Pls
+829 880 Pls
+831 889 Pls
+832 899 Pls
+834 908 Pls
+836 916 Pls
+838 925 Pls
+787 671 Pls
+794 706 Pls
+799 732 Pls
+803 755 Pls
+807 774 Pls
+811 792 Pls
+814 808 Pls
+817 824 Pls
+820 838 Pls
+823 851 Pls
+825 864 Pls
+828 876 Pls
+830 888 Pls
+832 900 Pls
+835 911 Pls
+837 921 Pls
+839 931 Pls
+841 941 Pls
+843 951 Pls
+845 960 Pls
+788 681 Pls
+796 719 Pls
+801 749 Pls
+806 774 Pls
+811 796 Pls
+814 816 Pls
+818 834 Pls
+821 851 Pls
+824 867 Pls
+827 882 Pls
+830 896 Pls
+833 910 Pls
+835 923 Pls
+838 936 Pls
+840 948 Pls
+842 960 Pls
+845 971 Pls
+847 982 Pls
+849 993 Pls
+851 1004 Pls
+789 693 Pls
+797 737 Pls
+804 770 Pls
+809 798 Pls
+813 823 Pls
+818 845 Pls
+821 866 Pls
+825 885 Pls
+828 903 Pls
+831 920 Pls
+834 936 Pls
+837 952 Pls
+840 967 Pls
+843 981 Pls
+845 995 Pls
+848 1008 Pls
+850 1021 Pls
+852 1034 Pls
+855 1046 Pls
+857 1058 Pls
+810 709 Pls
+827 759 Pls
+840 797 Pls
+850 829 Pls
+860 858 Pls
+869 884 Pls
+876 907 Pls
+884 929 Pls
+891 950 Pls
+897 970 Pls
+903 988 Pls
+909 1006 Pls
+915 1023 Pls
+921 1039 Pls
+926 1055 Pls
+931 1071 Pls
+936 1085 Pls
+941 1100 Pls
+945 1114 Pls
+950 1128 Pls
+824 729 Pls
+847 788 Pls
+864 833 Pls
+879 871 Pls
+892 904 Pls
+903 934 Pls
+914 962 Pls
+924 988 Pls
+933 1012 Pls
+942 1035 Pls
+951 1057 Pls
+959 1078 Pls
+966 1098 Pls
+974 1117 Pls
+981 1136 Pls
+988 1154 Pls
+994 1171 Pls
+1001 1188 Pls
+1007 1204 Pls
+1013 1220 Pls
+838 759 Pls
+866 829 Pls
+887 883 Pls
+906 929 Pls
+921 969 Pls
+936 1006 Pls
+949 1039 Pls
+962 1070 Pls
+973 1100 Pls
+984 1127 Pls
+995 1154 Pls
+1005 1179 Pls
+1014 1203 Pls
+1024 1226 Pls
+1032 1248 Pls
+1041 1270 Pls
+1049 1291 Pls
+1057 1311 Pls
+1065 1331 Pls
+1073 1351 Pls
+849 802 Pls
+881 891 Pls
+907 959 Pls
+928 1016 Pls
+946 1067 Pls
+963 1113 Pls
+979 1155 Pls
+993 1194 Pls
+1006 1231 Pls
+1019 1265 Pls
+1031 1298 Pls
+1043 1330 Pls
+1054 1360 Pls
+1065 1389 Pls
+1075 1418 Pls
+1085 1445 Pls
+1095 1471 Pls
+1104 1497 Pls
+1114 1522 Pls
+1123 1546 Pls
+989 875 Pls
+1080 994 Pls
+1150 1085 Pls
+1208 1162 Pls
+1260 1230 Pls
+1307 1291 Pls
+1350 1347 Pls
+1390 1400 Pls
+1427 1449 Pls
+1463 1496 Pls
+1497 1540 Pls
+1529 1582 Pls
+1560 1623 Pls
+1590 1662 Pls
+1619 1700 Pls
+1647 1736 Pls
+1674 1771 Pls
+1700 1806 Pls
+1725 1839 Pls
+1750 1871 Pls
+1088 1021 Pls
+1219 1200 Pls
+1320 1337 Pls
+1405 1453 Pls
+1480 1555 Pls
+1548 1648 Pls
+1610 1733 Pls
+1668 1812 Pls
+1723 1886 Pls
+1774 1956 Pls
+1823 2023 Pls
+1870 2087 Pls
+1915 2148 Pls
+1958 2207 Pls
+2000 2264 Pls
+2040 2319 Pls
+2080 2372 Pls
+2118 2424 Pls
+2154 2474 Pls
+2190 2523 Pls
+2045 1458 Pls
+2573 1818 Pls
+2979 2094 Pls
+3320 2327 Pls
+3621 2533 Pls
+3893 2718 Pls
+4144 2889 Pls
+4377 3048 Pls
+4595 3197 Pls
+4802 3338 Pls
+4999 3473 Pls
+5187 3601 Pls
+5367 3724 Pls
+5541 3842 Pls
+5708 3956 Pls
+5870 4067 Pls
+6027 4174 Pls
+6180 4278 Pls
+6328 4379 Pls
+6472 4478 Pls
+6579 4738 Pls
+% End plot #1
+1.000 UL
+LTb
+770 4871 N
+770 588 L
+6177 0 V
+0 4283 V
+-6177 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Symbol Helvetica

@@ -1,0 +1,3 @@
+dx/dt = -y(y-2)
+dy/dt = (x-2)(y-2)
+done

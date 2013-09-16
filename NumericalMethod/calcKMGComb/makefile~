@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS = -Wall -ansi
+
+calcKMGComb: calcKMGComb.c
+	$(CC) $(CFLAGS) -o $@ $^ -lm
+
+run:
+	./calcKMGComb
+
+clean:
+	rm calcKMGComb

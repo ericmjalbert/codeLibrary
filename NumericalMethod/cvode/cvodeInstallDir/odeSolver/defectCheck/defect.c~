@@ -1,0 +1,164 @@
+/*
+ * -------------------------------------------------------------
+ *  defect.c
+ *  A program that checks the defect between wavespeed values 
+ *    using the back-transformed solution and solving the 
+ *    wavespeed from it.
+ * -------------------------------------------------------------
+ *  Author              :   Eric Jalbert
+ *  Date Created        :   August 15, 2013
+ *  Date Last Modified  :   August 22, 2013
+ * -------------------------------------------------------------
+ */
+ 
+#include<math.h> 
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+
+/* Problem Parameters */
+#define ALPHA 4
+#define BETA  4
+#define GAMMA 4
+#define MU    6
+#define DELTA 1.0e-8
+#define KAPPA 0.95
+
+#define STEP  1.0e-3
+#define LOOPCOUNT 7
+
+/*-----------------------------------
+ * Functions used by solver functions
+ *-----------------------------------
+ */
+ 
+/* D(y1), the density function */
+double D(double y1)
+{
+    return DELTA * pow(y1, ALPHA) * pow(1-y1, -BETA);
+}
+
+/*
+ * D'(y1), the derivative of D(y1) with respect to y1
+ */
+double DiffusionPrime(double y1)
+{
+    double DPrime;
+ 
+    DPrime = DELTA * pow(y1, ALPHA-1) * (ALPHA * (1-y1) + BETA * y1);
+    DPrime *= pow(1-y1, -BETA-1);
+ 
+    return DPrime;
+
+}
+
+/* f(y1), the growth rate function */
+double Growth(double y1)
+{
+    return MU * y1 * (1 - pow((y1/KAPPA), GAMMA));
+}
+
+
+/*--------------
+ * Main Function
+ *--------------
+ */
+
+int main()
+{
+  FILE * file = NULL;
+  FILE * output = fopen("wavespeed.dat", "w");
+  char filename[100];
+  char line[100];
+  char * token = NULL;
+  char ** endptr = NULL;
+  double U[80000];
+  double z[80000];
+  double uDeriv[80000];
+  double u2ndDeriv[80000];
+  double ** wavespeed = malloc(sizeof **wavespeed * 8);
+  double Cvalues[100];
+  int loop, count = 0, i;
+  
+Cvalues[7] = 0.0044360187373969;
+Cvalues[6] = 0.0044360187375934;
+Cvalues[5] = 0.0044360187776023;
+Cvalues[4] = 0.0044360191771829;
+Cvalues[3] = 0.0044360231763632;
+Cvalues[2] = 0.0044360631545627;
+Cvalues[1] = 0.0044364629022312;
+Cvalues[0] = 0.0044404593787033;
+  
+  for(loop = 7; loop <= LOOPCOUNT; loop++)
+  {
+    count = 0;
+  
+    sprintf(filename, "backTrans%d.dat", loop);
+    file = fopen(filename, "r");
+    
+     
+    /* Extract Us from file */
+    while(fgets(line, sizeof(line), file) != NULL)
+    {
+      token = strtok(line, " ");
+      z[count] = strtod(token, endptr);
+      token = strtok(NULL, "\n");
+      U[count] = strtod(token, endptr);
+      count++;
+    }
+        
+    
+    wavespeed[loop] = malloc(sizeof *wavespeed[loop] * count);
+    
+    /* Calculate uDeriv and u2ndDeriv Values */
+    
+    for(i = 0; i < count; i++)
+    {
+      if(i == 0)
+      {
+        uDeriv[i] = -(z[i+1] + z[i+2] - 2*z[i])*U[i+3] / (z[i+3] - z[i+1])/(z[i+3] - z[i+2]) - (z[i+3] + z[i+2] - 2*z[i])*U[i+1] / (z[i+1] - z[i+3]) / (z[i+1] - z[i+2]) - (z[i+3] + z[i+1] - 2* z[i]) * U[i+2] / (z[i+2] - z[i+3]) / (z[i+2] - z[i+1]);
+    
+        u2ndDeriv[i] = 2 * U[i+3] / (z[i+3] - z[i+1])/(z[i+3] - z[i+2]) + 2 * U[i+1] / (z[i+1] - z[i+3]) / (z[i+1] - z[i+2]) + 2 * U[i+2] / (z[i+2] - z[i+3]) / (z[i+2] - z[i+1]);
+ 
+      }
+      else if (i >= count - 2)
+      {
+        uDeriv[i] = -(z[i-1] + z[i-2] - 2*z[i])*U[i-3] / (z[i-3] - z[i-1])/(z[i-3] - z[i-2]) - (z[i-3] + z[i-2] - 2*z[i])*U[i-1] / (z[i-1] - z[i-3]) / (z[i-1] - z[i-2]) - (z[i-3] + z[i-1] - 2* z[i]) * U[i-2] / (z[i-2] - z[i-3]) / (z[i-2] - z[i-1]);
+      
+        u2ndDeriv[i] = 2 * U[i-3] / (z[i-3] - z[i-1])/(z[i-3] - z[i-2]) + 2 * U[i-1] / (z[i-1] - z[i-3]) / (z[i-1] - z[i-2]) + 2 * U[i-2] / (z[i-2] - z[i-3]) / (z[i-2] - z[i-1]);
+      }
+      else
+      {
+        uDeriv[i] = -(z[i+1] + z[i+2] - 2*z[i])*U[i-1] / (z[i-1] - z[i+1])/(z[i-1] - z[i+2]) - (z[i-1] + z[i+2] - 2*z[i])*U[i+1] / (z[i+1] - z[i-1]) / (z[i+1] - z[i+2]) - (z[i-1] + z[i+1] - 2* z[i]) * U[i+2] / (z[i+2] - z[i-1]) / (z[i+2] - z[i+1]);
+    
+        u2ndDeriv[i] = 2 * U[i-1] / (z[i-1] - z[i+1]) / (z[i-1] - z[i+2]) + 2 * U[i+1] / (z[i+1] - z[i-1]) / (z[i+1] - z[i+2]) + 2 * U[i+2] / (z[i+2] - z[i-1]) / (z[i+2] - z[i+1]);
+      }
+    }
+
+
+    for(i = 0; i < count; i++)
+    {
+      fprintf(output, "%.16f ", z[i]);
+      fprintf(output, "%.16f ", -Cvalues[loop] * uDeriv[i]);
+      fprintf(output, "%.16f\n", (D(U[i]) * u2ndDeriv[i] + DiffusionPrime(U[i])*pow(uDeriv[i], 2) + Growth(U[i])));
+    }
+
+    
+    fprintf(output, "\n");
+    fclose(file);
+  }
+  fclose(output);
+  
+  for(i = 0; i <= LOOPCOUNT; i++)
+    free(wavespeed[i]);
+  free(wavespeed);
+  
+  return 1;
+
+}
+
+
+
+
+

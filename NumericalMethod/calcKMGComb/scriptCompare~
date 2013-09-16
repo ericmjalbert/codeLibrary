@@ -1,0 +1,28 @@
+set terminal postscript eps color enhanced
+set yl "c_{/Symbol e}"
+set xl "c_{crit}"
+set xr [0:]
+set yr [0:]
+set output "GAMMA405.eps"
+f1(x) = m1*x + b1
+f2(x) = m2*x + b2
+f3(x) = m3*x + b3
+f4(x) = m4*x + b4
+f5(x) = m5*x + b5
+f6(x) = m6*x + b6
+f7(x) = m7*x + b7
+f8(x) = m8*x + b8
+f9(x) = m9*x + b9
+f0(x) = m0*x + b0
+fit f1(x) 'GAMMA400' using 6:1 via m1,b1
+fit f2(x) 'GAMMA401' using 6:1 via m2,b2
+fit f3(x) 'GAMMA402' using 6:1 via m3,b3
+fit f4(x) 'GAMMA403' using 6:1 via m4,b4
+fit f5(x) 'GAMMA404' using 6:1 via m5,b5
+fit f6(x) 'GAMMA405' using 6:1 via m6,b6
+fit f7(x) 'GAMMA406' using 6:1 via m7,b7
+fit f8(x) 'GAMMA407' using 6:1 via m8,b8
+fit f9(x) 'GAMMA408' using 6:1 via m9,b9
+fit f0(x) 'GAMMA409' using 6:1 via m0,b0
+update vals
+#plot  'GAMMA400' using 6:1, f1(x), 'GAMMA401' using 6:1, f2(x), 'GAMMA402' using 6:1, f3(x), 'GAMMA403' using 6:1, f4(x), 'GAMMA404' using 6:1, f5(x), 'GAMMA405' using 6:1, f6(x), 'GAMMA406' using 6:1, f7(x), 'GAMMA407' using 6:1, f8(x), 'GAMMA408' using 6:1, f9(x), 'GAMMA409' using 6:1, f0(x)

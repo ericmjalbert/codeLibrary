@@ -1,0 +1,146 @@
+/*
+ *  Name  : Eric Jalbert
+ *  Number: 0712946
+ *  Comments: This file contains all of the operations of the List ADT. Each 
+ *          function has its preconditions and postconditions stated above it, 
+ *          also there is a small comment for anything that requires commenting.
+ *  Time of Last Edit: July 4th, 2013
+ */
+ 
+#include <list.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+/*createList(node): node
+ *      Preconditions: none.
+ *      Postconditions: a linked list is created and returned with a 
+ *          NULL first element.
+ *      Comments: This operation is used to create the first node.
+ */
+node *createList (node * dummyNode){
+    dummyNode = malloc(sizeof(node));
+    dummyNode->next = NULL;
+    return dummyNode;
+}
+
+/*destroyList(node): node
+ *      Preconditions: The linked list to be destroyed has been 
+ *          initialized.
+ *      Postconditions: The list is destroyed, its value set to 0 and
+ *          the memory allocated for it has been released.
+ *      Comments: This operation is suppose to destroy the list, unfortunately  
+ *          I couldn't manage to get it working properly.... I figure its 
+ *          because I'm not suppose to return the head, but I have even tried 
+ *          making the it a void function. Any helpful tips here would be much 
+ *          appreciated.
+ */
+void *destroyList(node *head){
+    node *temp = NULL;
+    while(head != NULL){
+        temp = head;
+        head = head->next;
+        temp->value = 0;
+        free(temp->element);
+        free(temp);
+    }
+    return head;
+}
+
+
+/*createNode(int): node
+ *      Preconditions: None.
+ *      Postconditions: A node is returned with the value of int.
+ *      Comments: This function is used to create the node used in addFront.
+ */
+node *createNode(Sparse * num){
+    node *newNode = malloc(sizeof(node));
+    newNode->element = malloc(sizeof newNode->element);
+    newNode->element->value = num->value;
+    newNode->element->row = num->row;
+    newNode->element->col = num->col;
+    newNode->next = NULL;
+	return newNode;
+}
+
+/*addFront(node, int)
+ *      Preconditions: None.
+ *      Postconditions: The new node is added to the front of the linked 
+ *          list with the value of int set to it and the changed linked list is 
+ *          returned.
+ *      Comments: This function is used to add a node to the front of the 
+ *          linked list. I had a problem where my linked list would always 
+ *          include a 0 at the front when it was created, so I made it check if 
+ *          the node it was adding was the first one, so that it can eliminate 
+ *          the 0 that came with the first initialization (hence why I have the 
+ *          if(empty ==1){...} stuff in there).
+ */
+node *addFront (node *head, Sparse * num){
+    node *newNode = NULL;
+    
+    if(head == NULL){
+        newNode = createList(newNode);
+    }    
+    newNode = createNode(num);
+    newNode->next = head;
+    head = newNode;
+    
+    return head;
+}
+
+/*getFront(node): int
+ *      Preconditions: The front node exist and has an integer value.
+ *      Postconditions: The integer value is returned.
+ *      Comments: This function simply gets the value of the front node.
+ */
+int getFront(node *head){
+    if(head != NULL){
+        int frontValue = head->element->value;
+        printf("The value of the front node is %d\n", frontValue);
+        return frontValue;
+    }
+    else printf("The linked list is empty, there is no value to get\n");
+    return 0;
+}
+
+/*removeFront(node): node
+ *      Preconditions: The linked list to be destroyed has been 
+ *          initialized and there exist at least one node.
+ *      Postconditions: The front node is destroyed, its value set to 0 
+ *          and the memory allocated for it has been released and the changed
+ *          linked list is returned.
+ *      Comments: This function removes the front node. I was having problems 
+ *          with returning the value being removed, so I included the printf 
+ *          line that said what value was being removed in the function, it 
+ *          works fairly well so I figured it'd work.
+ */
+node *removeFront(node *head){
+    if(head != NULL){
+        int num = head->element->value;
+        node *current = head;
+        head = current->next;
+        free(current);
+        printf("The front node, %d, was removed\n", num);
+        return head;
+    }
+    else{
+        printf("The linked list is empty, there is no node to remove!\n");
+        return NULL;
+    }
+}
+
+/*printList(node)
+ *      Preconditions: The linked list to be printed has been 
+ *          initialized.
+ *      Postconditions: none.
+ *      Comments: This function prints all the values each node.
+ */
+void printList(node *head){
+    if(head != NULL){
+        while(head != NULL){
+           	printf("%d ", head->element->value);
+           	head = head->next;
+        }
+        printf("\n");
+    }
+    else printf("The linked list is empty, there is nothing to print\n");
+}

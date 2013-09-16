@@ -1,0 +1,35 @@
+/*****
+ *
+ *  Main program
+ *  
+ *  Randomly makes a sparse matrix and multiplies it with a vector
+ *  
+ *  Author:         Eric Jalbert
+ *  Date Started:   June 20th, 2013
+ *  Date Modified:  July 4th, 2013
+ *  
+ *****/ 
+
+#include "sparseMulti.h"
+
+int main()
+{  
+  int ** matrix = genSparseMatrix();
+  /*int * vector = genVector();
+  */
+  node * new = NULL;
+
+	printMatrix(matrix);
+	while(new->next != NULL)
+	{
+	  printList(new);
+	  new = NULL;
+	}
+	
+  return 0;
+
+}
+
+
+
+

@@ -1,0 +1,351 @@
+/*
+ * -------------------------------------------------------------
+ *  gridSolver.c
+ *  A program that solves an ODE with different parameter 
+ *  values, together they can make a grid....
+ * -------------------------------------------------------------
+ *  Author              :   Eric Jalbert
+ *  Date Created        :   July 8, 2013
+ *  Date Last Modified  :   July 10, 2013
+ * -------------------------------------------------------------
+ */
+ 
+#include <stdio.h>      
+#include <stdlib.h>     
+#include <math.h>      
+
+/* Header files with a description of contents used */
+#include <cvode/cvode.h>             /* prototypes for CVODE fcts., consts. */
+#include <nvector/nvector_serial.h>  /* serial N_Vector types, fcts., macros */
+#include <cvode/cvode_dense.h>       /* prototype for CVDense */
+#include <sundials/sundials_dense.h> /* definitions DlsMat DENSE_ELEM */
+#include <sundials/sundials_types.h> /* definition of type realtype */
+
+/*
+ *-----------------------
+ * Parameter Definitions 
+ *-----------------------
+ */
+ 
+/* Boolean Definition */
+#define TRUE 1
+#define FALSE 0
+
+/* Problem Constants */
+#define NEQ   2                /* number of equations  */
+#define RTOL  RCONST(1.0e-14)  /* scalar relative tolerance            */
+#define ATOL1 RCONST(1.0e-20)  /* vector absolute tolerance components */
+#define ATOL2 RCONST(1.0e-2)
+#define T0    RCONST(0.0)      /* initial time           */
+#define T1    RCONST(0.01)   /* first output time      */
+#define EMULT RCONST(1.0e-1)   /* multiplier factor for epsilon */ 
+#define UPPER 1
+#define LOWER 0
+#define UBOUND 0.001
+
+/* Problem Parameters */
+#define ALPHA 4
+#define BETA  4
+#define DELTA RCONST(1.0e-8)
+
+/* Looping Parameters */
+#define ERROREND    RCONST(1.0e-6) /* accuracy between c values */
+#define ERRORSOL    RCONST(1.0e-8)  /* accuracy between upper and lower bound *?
+
+/* Global Variables */
+realtype c;                                 /* wavespeed */
+realtype epsilonRegularize = 0.99999999999;     /* regularization of D(y1) */
+realtype MU = 1;
+realtype KAPPA = 0.9;
+realtype GAMMA = 6;
+
+/*
+ *-----------------------------------
+ * Functions used by solver functions
+ *-----------------------------------
+ */
+ 
+/*
+ * D(y1), the density function
+ */
+realtype Diffusion(realtype y1)
+{
+    return DELTA * pow(y1, ALPHA) * pow(1-y1, -BETA) + epsilonRegularize * y1 * DELTA;
+
+}
+
+/*
+ * D'(y1), the derivative of D(y1) with respect to y1
+ */
+realtype DiffusionPrime(realtype y1)
+{
+    realtype DPrime;
+ 
+    DPrime = DELTA * pow(y1, ALPHA-1) * (ALPHA * (1-y1) + BETA * y1);
+    DPrime *= pow(1-y1, -BETA-1);
+ 
+    return DPrime + epsilonRegularize * DELTA;
+
+}
+
+ 
+/*
+ * f(y1), the growth rate function
+ */
+realtype Growth(realtype y1)
+{
+    return MU * y1 * (1 - pow((y1/KAPPA), GAMMA));
+
+}
+
+
+/*
+ *-------------------------------
+ * Functions called by the solver
+ *-------------------------------
+ */
+
+/*
+ * f routine. Compute function f(t,y).
+ */
+
+static int f(realtype t, N_Vector y, N_Vector ydot, void *user_data)
+
+{
+    realtype y1, y2, yd1, yd2;
+
+    y1 = NV_Ith_S(y,0);
+    y2 = NV_Ith_S(y,1);  
+
+    /* This is the one where I used tau = -t to get my backwards integration */
+    NV_Ith_S(ydot,0) = -Diffusion(y1) * y2;
+    NV_Ith_S(ydot,1) = DiffusionPrime(y1) * y2 * y2 + c * y2 + Growth(y1);
+
+    yd1 = NV_Ith_S(y,0);
+    yd2 = NV_Ith_S(y,1);
+
+  return(0);
+}
+
+
+/*
+ *--------------
+ * Main Program
+ *--------------
+ */
+
+int main()
+{
+    /* Declare Variables */  
+    N_Vector y;
+    N_Vector abstol;
+    realtype reltol;
+    void * cvode_mem;
+    int flag;
+    realtype tout;  /* First output time */
+    realtype t;
+    
+    /* Variables for numerical method */
+    realtype waveSpeedError = 10;
+    int cFound = FALSE;
+    realtype cValues[100];
+    realtype epsilonValues[100];
+    realtype trajValues[10000];
+    int i = 0;
+    int j = 0;
+    realtype upperBound;
+    realtype lowerBound;
+    int loopCount = 0;
+    realtype timeChange = 1;
+    realtype prevV = 100000000;
+    realtype prevU = 100000000;
+    
+    /* Variables for writing to files */
+    int goodData = FALSE;
+    FILE * converg;
+    FILE * phasePlane;
+    FILE * travelin;
+    FILE * grid = NULL;
+    char filename[30];
+    char variLine[100];
+    
+    y = NULL;
+    abstol = NULL;
+    cvode_mem = NULL;
+
+for(GAMMA = 4; GAMMA <= 5; GAMMA += 2)
+{
+sprintf(filename, "cGridGAMMA%d.dat", (int)GAMMA);
+grid = fopen(filename, "w");
+/* KAPPA loop */
+for(KAPPA = 0.94; KAPPA < .9999; KAPPA += .01)
+{
+/* MU loop */
+for(MU = 1; MU <= 10; MU++)
+{
+  i = 0;
+  waveSpeedError = 10;
+  epsilonRegularize = 0.99999999999;
+    /* Start loop */
+    while(waveSpeedError >= ERROREND)
+    {
+        /* initialize problem */
+        upperBound = UPPER;
+        lowerBound = LOWER;
+        c = (upperBound + lowerBound)/2;
+        goodData = FALSE;
+        
+        while(cFound == FALSE)
+        {
+            
+            /* Setting vector to initial values */
+            y = N_VNew_Serial(NEQ);
+            NV_Ith_S(y, 0) = (0.00001)*epsilonRegularize;
+            NV_Ith_S(y, 1) = -c / (DELTA * epsilonRegularize);
+            
+            /* Setting absolute tolerance vector */
+            abstol = N_VNew_Serial(NEQ);
+            NV_Ith_S(abstol,0) = ATOL1;
+            NV_Ith_S(abstol,1) = ATOL2;
+            
+            /* Setting relative tolerance */
+            reltol = RTOL;
+            
+            /* Call CVodeCreate to make memory for solver and select */ 
+            /* differentiation formula and use of a newton interation*/
+            cvode_mem = CVodeCreate(CV_BDF, CV_NEWTON);
+            
+            /* Initialize the memory and give the function f, */
+            /* initial time T0, and the dependent variable y  */
+            flag = CVodeInit(cvode_mem, f, T0, y);
+            
+            /* Call CVodeSVtolerances to specify the scalar relative */
+            /* tolerance and vector absolute tolerances              */
+            flag = CVodeSVtolerances(cvode_mem, reltol, abstol);
+            
+            /* Call CVDense to specify the CVDENSE dense linear solver */
+            flag = CVDense(cvode_mem, NEQ);
+            
+            /* Set the maximum number of steps for the solver */
+            flag = CVodeSetMaxNumSteps(cvode_mem, 20000);
+            
+            /* Set initial time and amount of outputs to default */
+            tout = T1;
+            t = 0;
+            loopCount = 0;
+            
+            /* Run CVODE */
+            while(1)
+            {
+            
+              /* Move the vectors forward */
+                flag = CVode(cvode_mem, tout, y, &t, CV_NORMAL);
+              
+            
+                /* Write data points only if they're far enough apart */
+                if(fabs(NV_Ith_S(y,0) - prevU) >= UBOUND)
+                {
+                    prevU = NV_Ith_S(y,0);
+                    prevV = NV_Ith_S(y,1);
+                    timeChange *= .93;
+                }
+                else timeChange *= 1.001;
+
+
+                /* Undershot the equillibrium */
+                if(NV_Ith_S(y,0) >= KAPPA)
+                {
+                    upperBound = c;
+                    c = (upperBound + lowerBound)/2;
+                    break;
+                }
+                
+                /* Overshot the equillibrium */
+                if(NV_Ith_S(y,1) >= 0)
+                {
+                    lowerBound = c;
+                    c = (upperBound + lowerBound)/2;
+                    break;
+                }
+                
+                if (flag == CV_SUCCESS)
+                {
+                   tout += timeChange;
+                }        
+                 
+                loopCount++;
+            }
+
+                
+            /*******************/
+            /* Destroy problem */
+            /*******************/
+             
+            /* Free y and abstol vectors */
+            N_VDestroy_Serial(y);
+            N_VDestroy_Serial(abstol);
+            /* Free integrator memory */
+            CVodeFree(&cvode_mem);
+            /* Stop if the two bounds become sufficiently close */
+                if(fabs(upperBound - lowerBound) < ERRORSOL)
+                {
+
+                    cFound = TRUE;
+                    cValues[i] = c;
+                    epsilonValues[i] = epsilonRegularize;
+                    i++;
+                    goodData = TRUE;
+
+                    break;
+                }
+            
+        }
+        
+        /* Now lower regularizing Epsilon */
+        epsilonRegularize *= EMULT;
+        
+        /* Calculate waveSpeedError */    
+        if(i > 1)
+        {
+            waveSpeedError = fabs(cValues[i-1] - cValues[i-2]);
+        }
+        
+        /* Reset variables */
+        cFound = FALSE;
+        t = 0;
+        
+    }
+    
+    printf("found C!!\n----------------------------\n");
+            printf("%.16f %f %f\n", cValues[i-1], KAPPA, MU);
+    fprintf(grid, "%.16f %f %f\n", cValues[i-1], KAPPA, MU);
+    
+    /* display results */
+    j = i;
+    while(j > 0)
+    {
+        printf("CValues[%d] = %.16f, Epsilon = %le\n", j-1, cValues[j-1], epsilonValues[j-1]);
+        j--;
+    }
+    
+
+
+}
+fprintf(grid, "\n");
+}
+  fclose(grid);
+}
+
+
+    return 1;
+
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,329 @@
+/*****
+ *
+ *  Sparse matrix multipled with a vector
+ *  
+ *  Takes a sparse matrix and multiplies it with a vector
+ *  
+ *  Author:         Eric Jalbert
+ *  Date Started:   June 20th, 2013
+ *  Date Modified:  July 4th, 2013
+ *  
+ *****/ 
+
+#include "sparseMulti.h"
+ 
+double ** genSparseMatrix()
+{
+  int i = 0;
+  int j = 0;
+  double ** mat = NULL;
+  srand(time(0));
+  
+  /* calloc memory for the matrix entries */
+  mat = calloc(SIZE, sizeof *mat);
+  for(i = 0; i < SIZE; i++)
+  {
+    mat[i] = calloc(SIZE, sizeof *mat[i]); 
+    for(j = 0; j < SIZE; j++)
+    {
+        if(i == j)
+          mat[i][j] = rand()%70 + 30; /*non-zero only*/
+        else if(rand()%10 < 1)
+          mat[i][j] = rand()%3 + 1;
+        else
+          mat[i][j] = 0;
+    } 
+  }
+	
+    return mat;
+}
+
+
+
+int * genVector()
+{
+  int i;
+  int * vector = NULL;
+  srand(time(0));
+  
+  vector = calloc(SIZE, sizeof *vector);
+
+  for(i = 0; i < SIZE; i++)
+  {
+    vector[i] = rand()%9+1;
+  }
+
+  return vector;
+}
+
+
+Sparse * convertMatrix(double ** matrix)
+{
+  Sparse * mat = malloc(sizeof * mat);
+  int i,j;
+  
+  mat->count = 0;
+  mat->row_ptr = malloc(sizeof * mat->row_ptr * (1));
+  
+  for(i = 0; i < SIZE; i++)
+  {
+    mat->row_ptr = realloc(mat->row_ptr, sizeof * mat->row_ptr * (i+1));
+    mat->row_ptr[i] = mat->count;
+
+    for(j = 0; j < SIZE; j++)
+    {
+      if(matrix[i][j] != 0)
+      {
+        if(mat->count == 0)
+        {
+          mat->value = malloc(sizeof * mat->value * (mat->count+1));
+          mat->col = malloc(sizeof * mat->col * (mat->count + 1));
+        }
+        else
+        {
+          mat->value = realloc(mat->value, sizeof *mat->value * (mat->count+1));
+          mat->col = realloc(mat->col, sizeof * mat->col * (mat->count+1));
+        }
+        
+        mat->value[mat->count] = matrix[i][j];
+        mat->col[mat->count] = j;
+        mat->count++;
+      }
+    }
+  }
+    
+  mat->row_ptr = realloc(mat->row_ptr, sizeof * mat->row_ptr * (SIZE+1));
+  mat->row_ptr[SIZE]  = mat->count+1;
+    
+  return mat;
+}
+
+
+int printMatrix(double ** matrix)
+{
+  int i, j;
+		for(i = 0; i < SIZE; i++)
+		{
+			for(j = 0; j < SIZE; j++)
+			{
+				printf("%.0f ", matrix[i][j]);
+			}
+			printf("\n");
+		}
+		
+		return 0;
+}
+
+
+
+int printVector(int * vector)
+{
+  int i;
+  for(i = 0; i < SIZE; i++)
+    printf("%d ", vector[i]);
+    
+    printf("\n");
+  return 0;
+}
+
+int printDoubleVector(double * vector)
+{
+  int i;
+  for(i = 0; i < SIZE; i++)
+    printf("%.0f ", vector[i]);
+    
+    printf("\n");
+  return 0;
+}
+
+
+double vectorTimesVector(double * a, double * b)
+{
+  double result = 0;
+  int i;
+  
+  for(i = 0; i < SIZE; i++)
+    result += a[i] * b[i];
+
+  return result;
+}
+
+double * matrixTimesVector(double ** matrix, double * vector)
+{
+  double * result = calloc(SIZE, sizeof(*result));
+  int i, j;
+  
+  
+  for(i = 0; i < SIZE; i++)
+  {
+    result[i] = 0;
+    for(j = 0; j < SIZE; j++)
+      result[i] += matrix[i][j] * vector[j];
+  }
+
+return result;
+}
+
+
+
+int * sparseTimesVector(Sparse * matrix, int * vector)
+{
+  int * result = calloc(SIZE, sizeof * vector);
+  int i, j;
+
+  for(i = 0; i < SIZE; i++)
+    result[i] = 0;
+  
+  for(i = 0; i < SIZE-1; i++)
+  {  
+    for(j = matrix->row_ptr[i]; j < matrix->row_ptr[i+1]; j++)
+    {
+      result[i] += matrix->value[j] * vector[matrix->col[j]];
+    }
+  }
+    
+  return result;
+}
+
+
+int * jacobiMethod(double ** a, int * b)
+{
+  double * x = calloc(SIZE, sizeof * x);
+  double sigma;
+  int i, j, k;
+  int * result = calloc(SIZE, sizeof *result);
+
+  /* Choose initial guess */
+  for(i = 0; i < SIZE; i++)
+  {
+    x[i] = 1;
+  }
+  
+  for(k = 0; k < 10; k++)
+  {
+    for(i = 0; i < SIZE; i++)
+    {
+      sigma = 0;
+      for(j = 0; j < SIZE; j++)
+      {
+        if(j != i)
+          sigma += a[i][j] * x[j];
+      }
+      x[i] = (b[i] - sigma) / a[i][i];
+    }
+    printDoubleVector(x);
+  }
+  
+  for(i = 0; i < SIZE; i++)
+    result[i] = round(x[i]);
+  
+  return result;
+}
+
+/* Conjugate Gradiant Method */
+double * conjugateGradient(double ** a, int * b)
+{
+  double * x = calloc(SIZE, sizeof * x);
+  double * r = calloc(SIZE, sizeof * r);
+  double * aTimesX = calloc(SIZE, sizeof * aTimesX);
+  double * z = calloc(SIZE, sizeof * z);  
+  double rho[2] = {0};
+  double * p = calloc(SIZE, sizeof * p);  
+  double * pBefore = calloc(SIZE, sizeof * pBefore);
+  double * q = calloc(SIZE, sizeof * q);  
+  int i, j, k = 0;
+  double * result = calloc(SIZE, sizeof *result);
+  double convergCheck, alpha;
+
+  /* Choose initial guess */
+  for(i = 0; i < SIZE; i++)
+    x[i] = 0;
+  
+  aTimesX = matrixTimesVector(a, x);
+  for(i = 0; i < SIZE; i++)
+    r[i] = b[i] - aTimesX[i];
+
+  /* k is number of iterations */
+  do
+  {
+    convergCheck = 0;
+    for(j = 0; j < SIZE; j++)
+      z[j] = r[j]; /* Solve M * z^{i-1} = r^{i-1}, M is precond. */
+      
+    rho[1] = vectorTimesVector(r, z);
+    
+    if(k == 0)
+      for(j = 0; j < SIZE; j++)
+        p[j] = z[j];
+    else
+      for(j = 0; j < SIZE; j++)
+        p[j] = z[j] + rho[1]/rho[0] * pBefore[j];
+      
+    q = matrixTimesVector(a, p);
+    alpha = rho[1] / vectorTimesVector(p, q);
+    for(j = 0; j < SIZE; j++)     
+    {
+      x[j] += alpha * p[j];
+      r[j] -= alpha * q[j];
+      pBefore[j] = p[j];
+      rho[0] = rho[1];
+      convergCheck += fabs(alpha * p[j]);
+    }
+    
+    k++;
+    if(k >= 10000)
+    {
+      printf("Error: No Covergence.\nAborting!\n");
+      exit(1);
+    }
+    
+  }while(convergCheck >= 0.0001);
+  
+  printf("%d iterations\n", k);
+  
+  for(i = 0; i < SIZE; i++)
+    result[i] = round(x[i]);
+  
+  free(x);
+  free(r);
+  free(aTimesX);
+  free(z);
+  free(p);
+  free(pBefore);
+  free(q);
+  
+  return result;
+}
+
+
+
+void * freeVector(int * vector)
+{
+  free(vector);
+  return NULL;
+}
+
+void * freeMatrix(double ** matrix)
+{
+  int i;
+  double ** temp = matrix;
+  for(i = 0; i < SIZE; i++)
+  {
+    temp[i] = matrix[i];
+    free(temp[i]);
+  }
+  free(temp);
+  
+  return NULL;
+}
+
+void * freeSparse(Sparse * matrix)
+{
+  free(matrix->value);
+  free(matrix->col);
+  free(matrix->row_ptr);
+  free(matrix);
+  
+  return NULL;
+}
+

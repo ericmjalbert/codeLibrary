@@ -1,0 +1,52 @@
+/*****
+ *
+ *  Header file for the Multiplication function
+ *    
+ *  Author:         Eric Jalbert
+ *  Date Started:   June 20th, 2013
+ *  Date Modified:  July 4th, 2013
+ *  
+ *****/ 
+ 
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+
+#define SIZE 6
+
+struct SparseMatrixFormat
+{
+  double * value;
+  int * col;
+  int * row_ptr;
+  int count;
+};
+typedef struct SparseMatrixFormat Sparse;
+
+
+struct newMatrixList
+{
+  Sparse * element;
+  struct newMatrixList * next;
+};
+typedef struct newMatrixList node;
+
+double ** genSparseMatrix();
+int * genVector();
+Sparse * convertMatrix(double ** matrix);
+int printMatrix(double ** matrix);
+int printVector(int * vector);
+int printDoubleVector(double * vector);
+double vectorTimesVector(double * a, double * b);
+double * matrixTimesVector(double ** matrix, double * vector);
+int * sparseTimesVector(Sparse * matrix, int * vector);
+int * jacobiMethod(double ** a, int * b);
+double * conjugateGradient(double ** a, int * b);
+void * freeVector(int * vector);
+void * freeMatrix(double ** matrix);
+void * freeSparse(Sparse * matrix);
+
+
+
+

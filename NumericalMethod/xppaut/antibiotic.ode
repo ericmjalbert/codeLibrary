@@ -1,0 +1,78 @@
+#ODE modelling antibiotic effects on biomass that consumes carbon...
+
+#paramaters:
+# yield from carbon
+p y=1
+# growth rate of bacteria
+p mu=2
+# carrying capacity for carbon?
+p k1=1.5 
+# carrying capacity for antibiotic
+p k2=1.5  
+# rate antibiotic kills bacteria
+p eta=20  
+# flow of fluid
+p q=0.3
+# fixed inflow of carbon
+p c0=1    
+# fixed inflow of antibiotics
+p a0=1  
+# not sure what this is....
+p z=1     
+# time antibiotics are introduced
+p aStart=4
+# time antibiotic introduction ends
+p aEnd=8
+# multiplicative factor; makes the hill function better
+p n=150
+
+
+#functions: 
+hill(star) = t**n/(star**n+t**n)
+#k(c,a,x) = k2 * c*a*x/((k1+c)*(k2+c))
+k(c,a,x) = c*a*x/(k2+c)
+
+
+
+#Differential Equations:
+# Carbon substrait; bacteria consumes this
+c' = -mu*c*x/(y*(k1+c)) - eta/y*k(c,a,x) + q * ( c0 - c)
+# Antibiotic substrait; this kills bacteria
+#a' = 0
+a' = -eta/z*k(c,a,x) + q*( a0*(hill(aStart)-hill(aEnd)) - a)
+# Bacteria Mass
+x' = mu*c*x/(k1+c) - eta*k(c,a,x) - q*x
+# Biproduct from Bacteria; measures their activity?, growth?
+p' = mu*c*x/(k1+c) + eta*a*c*x/(k2+c)
+
+
+#Initial Conditions:
+#init c=1, a=0, x=1, p=0
+#equillibrium without antibiotic
+init x=.7352941, a=0, c=.2647059, p=0
+
+
+#Settings:
+# viewing window settings; and axis setting
+@ xp=x, yp=c, xhi=0.9, xlo=0, yhi=.95, ylo=0.1
+
+# nullcline accuracy
+@ NMESH=400
+
+# The max memory that can be stored
+@ MAXSTOR=50000
+
+# The total time for an integration
+@ TOTAL=50
+
+done
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+refPhasePlane = graph of ten trajectories across V-axis, between 0 and quasi-equillibrium point

@@ -1,0 +1,9 @@
+dx/dt=y-mu*x
+dy/dt=z-nu*x
+dz/dt=q*x^2-gamma*x
+
+param mu=1
+param nu=1
+param gamma=1
+
+done

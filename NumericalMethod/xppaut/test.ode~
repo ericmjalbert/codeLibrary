@@ -1,0 +1,4 @@
+x'=x
+y'=(3*x-4*y-2)
+@ xp=x,yp=y,xhi=4,xlo=-2,yhi=3,ylo=-2
+done

@@ -1,0 +1,409 @@
+set terminal postscript eps color enhanced
+set yl "c_{/Symbol e}"
+set xl "c_{crit}"
+set xr [0:]
+set yr [0:]
+set output "cCompare4.eps"
+unset key
+f0(x) = m0 * x + b0
+fit f0(x) 'GAMMA2000.dat' using 6:1 via m0, b0
+f1(x) = m1 * x + b1
+fit f1(x) 'GAMMA2001.dat' using 6:1 via m1, b1
+f2(x) = m2 * x + b2
+fit f2(x) 'GAMMA2002.dat' using 6:1 via m2, b2
+f3(x) = m3 * x + b3
+fit f3(x) 'GAMMA2003.dat' using 6:1 via m3, b3
+f4(x) = m4 * x + b4
+fit f4(x) 'GAMMA2004.dat' using 6:1 via m4, b4
+f5(x) = m5 * x + b5
+fit f5(x) 'GAMMA2005.dat' using 6:1 via m5, b5
+f6(x) = m6 * x + b6
+fit f6(x) 'GAMMA2006.dat' using 6:1 via m6, b6
+f7(x) = m7 * x + b7
+fit f7(x) 'GAMMA2007.dat' using 6:1 via m7, b7
+f8(x) = m8 * x + b8
+fit f8(x) 'GAMMA2008.dat' using 6:1 via m8, b8
+f9(x) = m9 * x + b9
+fit f9(x) 'GAMMA2009.dat' using 6:1 via m9, b9
+f10(x) = m10 * x + b10
+fit f10(x) 'GAMMA2010.dat' using 6:1 via m10, b10
+f11(x) = m11 * x + b11
+fit f11(x) 'GAMMA2011.dat' using 6:1 via m11, b11
+f12(x) = m12 * x + b12
+fit f12(x) 'GAMMA2012.dat' using 6:1 via m12, b12
+f13(x) = m13 * x + b13
+fit f13(x) 'GAMMA2013.dat' using 6:1 via m13, b13
+f14(x) = m14 * x + b14
+fit f14(x) 'GAMMA2014.dat' using 6:1 via m14, b14
+f15(x) = m15 * x + b15
+fit f15(x) 'GAMMA2015.dat' using 6:1 via m15, b15
+f16(x) = m16 * x + b16
+fit f16(x) 'GAMMA2016.dat' using 6:1 via m16, b16
+f17(x) = m17 * x + b17
+fit f17(x) 'GAMMA2017.dat' using 6:1 via m17, b17
+f18(x) = m18 * x + b18
+fit f18(x) 'GAMMA2018.dat' using 6:1 via m18, b18
+f19(x) = m19 * x + b19
+fit f19(x) 'GAMMA2019.dat' using 6:1 via m19, b19
+f20(x) = m20 * x + b20
+fit f20(x) 'GAMMA2020.dat' using 6:1 via m20, b20
+f21(x) = m21 * x + b21
+fit f21(x) 'GAMMA2021.dat' using 6:1 via m21, b21
+f22(x) = m22 * x + b22
+fit f22(x) 'GAMMA2022.dat' using 6:1 via m22, b22
+f23(x) = m23 * x + b23
+fit f23(x) 'GAMMA2023.dat' using 6:1 via m23, b23
+f24(x) = m24 * x + b24
+fit f24(x) 'GAMMA2024.dat' using 6:1 via m24, b24
+f25(x) = m25 * x + b25
+fit f25(x) 'GAMMA2025.dat' using 6:1 via m25, b25
+f26(x) = m26 * x + b26
+fit f26(x) 'GAMMA2026.dat' using 6:1 via m26, b26
+f27(x) = m27 * x + b27
+fit f27(x) 'GAMMA2027.dat' using 6:1 via m27, b27
+f28(x) = m28 * x + b28
+fit f28(x) 'GAMMA2028.dat' using 6:1 via m28, b28
+f29(x) = m29 * x + b29
+fit f29(x) 'GAMMA2029.dat' using 6:1 via m29, b29
+f30(x) = m30 * x + b30
+fit f30(x) 'GAMMA2030.dat' using 6:1 via m30, b30
+f31(x) = m31 * x + b31
+fit f31(x) 'GAMMA2031.dat' using 6:1 via m31, b31
+f32(x) = m32 * x + b32
+fit f32(x) 'GAMMA2032.dat' using 6:1 via m32, b32
+f33(x) = m33 * x + b33
+fit f33(x) 'GAMMA2033.dat' using 6:1 via m33, b33
+f34(x) = m34 * x + b34
+fit f34(x) 'GAMMA2034.dat' using 6:1 via m34, b34
+f35(x) = m35 * x + b35
+fit f35(x) 'GAMMA2035.dat' using 6:1 via m35, b35
+f36(x) = m36 * x + b36
+fit f36(x) 'GAMMA2036.dat' using 6:1 via m36, b36
+f37(x) = m37 * x + b37
+fit f37(x) 'GAMMA2037.dat' using 6:1 via m37, b37
+f38(x) = m38 * x + b38
+fit f38(x) 'GAMMA2038.dat' using 6:1 via m38, b38
+f39(x) = m39 * x + b39
+fit f39(x) 'GAMMA2039.dat' using 6:1 via m39, b39
+f40(x) = m40 * x + b40
+fit f40(x) 'GAMMA2040.dat' using 6:1 via m40, b40
+f41(x) = m41 * x + b41
+fit f41(x) 'GAMMA2041.dat' using 6:1 via m41, b41
+f42(x) = m42 * x + b42
+fit f42(x) 'GAMMA2042.dat' using 6:1 via m42, b42
+f43(x) = m43 * x + b43
+fit f43(x) 'GAMMA2043.dat' using 6:1 via m43, b43
+f44(x) = m44 * x + b44
+fit f44(x) 'GAMMA2044.dat' using 6:1 via m44, b44
+f45(x) = m45 * x + b45
+fit f45(x) 'GAMMA2045.dat' using 6:1 via m45, b45
+f46(x) = m46 * x + b46
+fit f46(x) 'GAMMA2046.dat' using 6:1 via m46, b46
+f47(x) = m47 * x + b47
+fit f47(x) 'GAMMA2047.dat' using 6:1 via m47, b47
+f48(x) = m48 * x + b48
+fit f48(x) 'GAMMA2048.dat' using 6:1 via m48, b48
+f49(x) = m49 * x + b49
+fit f49(x) 'GAMMA2049.dat' using 6:1 via m49, b49
+f50(x) = m50 * x + b50
+fit f50(x) 'GAMMA2050.dat' using 6:1 via m50, b50
+f51(x) = m51 * x + b51
+fit f51(x) 'GAMMA2051.dat' using 6:1 via m51, b51
+f52(x) = m52 * x + b52
+fit f52(x) 'GAMMA2052.dat' using 6:1 via m52, b52
+f53(x) = m53 * x + b53
+fit f53(x) 'GAMMA2053.dat' using 6:1 via m53, b53
+f54(x) = m54 * x + b54
+fit f54(x) 'GAMMA2054.dat' using 6:1 via m54, b54
+f55(x) = m55 * x + b55
+fit f55(x) 'GAMMA2055.dat' using 6:1 via m55, b55
+f56(x) = m56 * x + b56
+fit f56(x) 'GAMMA2056.dat' using 6:1 via m56, b56
+f57(x) = m57 * x + b57
+fit f57(x) 'GAMMA2057.dat' using 6:1 via m57, b57
+f58(x) = m58 * x + b58
+fit f58(x) 'GAMMA2058.dat' using 6:1 via m58, b58
+f59(x) = m59 * x + b59
+fit f59(x) 'GAMMA2059.dat' using 6:1 via m59, b59
+f60(x) = m60 * x + b60
+fit f60(x) 'GAMMA2060.dat' using 6:1 via m60, b60
+f61(x) = m61 * x + b61
+fit f61(x) 'GAMMA2061.dat' using 6:1 via m61, b61
+f62(x) = m62 * x + b62
+fit f62(x) 'GAMMA2062.dat' using 6:1 via m62, b62
+f63(x) = m63 * x + b63
+fit f63(x) 'GAMMA2063.dat' using 6:1 via m63, b63
+f64(x) = m64 * x + b64
+fit f64(x) 'GAMMA2064.dat' using 6:1 via m64, b64
+f65(x) = m65 * x + b65
+fit f65(x) 'GAMMA2065.dat' using 6:1 via m65, b65
+f66(x) = m66 * x + b66
+fit f66(x) 'GAMMA2066.dat' using 6:1 via m66, b66
+f67(x) = m67 * x + b67
+fit f67(x) 'GAMMA2067.dat' using 6:1 via m67, b67
+f68(x) = m68 * x + b68
+fit f68(x) 'GAMMA2068.dat' using 6:1 via m68, b68
+f69(x) = m69 * x + b69
+fit f69(x) 'GAMMA2069.dat' using 6:1 via m69, b69
+f70(x) = m70 * x + b70
+fit f70(x) 'GAMMA2070.dat' using 6:1 via m70, b70
+f71(x) = m71 * x + b71
+fit f71(x) 'GAMMA2071.dat' using 6:1 via m71, b71
+f72(x) = m72 * x + b72
+fit f72(x) 'GAMMA2072.dat' using 6:1 via m72, b72
+f73(x) = m73 * x + b73
+fit f73(x) 'GAMMA2073.dat' using 6:1 via m73, b73
+f74(x) = m74 * x + b74
+fit f74(x) 'GAMMA2074.dat' using 6:1 via m74, b74
+f75(x) = m75 * x + b75
+fit f75(x) 'GAMMA2075.dat' using 6:1 via m75, b75
+f76(x) = m76 * x + b76
+fit f76(x) 'GAMMA2076.dat' using 6:1 via m76, b76
+f77(x) = m77 * x + b77
+fit f77(x) 'GAMMA2077.dat' using 6:1 via m77, b77
+f78(x) = m78 * x + b78
+fit f78(x) 'GAMMA2078.dat' using 6:1 via m78, b78
+f79(x) = m79 * x + b79
+fit f79(x) 'GAMMA2079.dat' using 6:1 via m79, b79
+f80(x) = m80 * x + b80
+fit f80(x) 'GAMMA2080.dat' using 6:1 via m80, b80
+f81(x) = m81 * x + b81
+fit f81(x) 'GAMMA2081.dat' using 6:1 via m81, b81
+f82(x) = m82 * x + b82
+fit f82(x) 'GAMMA2082.dat' using 6:1 via m82, b82
+f83(x) = m83 * x + b83
+fit f83(x) 'GAMMA2083.dat' using 6:1 via m83, b83
+f84(x) = m84 * x + b84
+fit f84(x) 'GAMMA2084.dat' using 6:1 via m84, b84
+f85(x) = m85 * x + b85
+fit f85(x) 'GAMMA2085.dat' using 6:1 via m85, b85
+f86(x) = m86 * x + b86
+fit f86(x) 'GAMMA2086.dat' using 6:1 via m86, b86
+f87(x) = m87 * x + b87
+fit f87(x) 'GAMMA2087.dat' using 6:1 via m87, b87
+f88(x) = m88 * x + b88
+fit f88(x) 'GAMMA2088.dat' using 6:1 via m88, b88
+f89(x) = m89 * x + b89
+fit f89(x) 'GAMMA2089.dat' using 6:1 via m89, b89
+f90(x) = m90 * x + b90
+fit f90(x) 'GAMMA2090.dat' using 6:1 via m90, b90
+f91(x) = m91 * x + b91
+fit f91(x) 'GAMMA2091.dat' using 6:1 via m91, b91
+f92(x) = m92 * x + b92
+fit f92(x) 'GAMMA2092.dat' using 6:1 via m92, b92
+f93(x) = m93 * x + b93
+fit f93(x) 'GAMMA2093.dat' using 6:1 via m93, b93
+f94(x) = m94 * x + b94
+fit f94(x) 'GAMMA2094.dat' using 6:1 via m94, b94
+f95(x) = m95 * x + b95
+fit f95(x) 'GAMMA2095.dat' using 6:1 via m95, b95
+f96(x) = m96 * x + b96
+fit f96(x) 'GAMMA2096.dat' using 6:1 via m96, b96
+f97(x) = m97 * x + b97
+fit f97(x) 'GAMMA2097.dat' using 6:1 via m97, b97
+f98(x) = m98 * x + b98
+fit f98(x) 'GAMMA2098.dat' using 6:1 via m98, b98
+f99(x) = m99 * x + b99
+fit f99(x) 'GAMMA2099.dat' using 6:1 via m99, b99
+f100(x) = m100 * x + b100
+fit f100(x) 'GAMMA2100.dat' using 6:1 via m100, b100
+f101(x) = m101 * x + b101
+fit f101(x) 'GAMMA2101.dat' using 6:1 via m101, b101
+f102(x) = m102 * x + b102
+fit f102(x) 'GAMMA2102.dat' using 6:1 via m102, b102
+f103(x) = m103 * x + b103
+fit f103(x) 'GAMMA2103.dat' using 6:1 via m103, b103
+f104(x) = m104 * x + b104
+fit f104(x) 'GAMMA2104.dat' using 6:1 via m104, b104
+f105(x) = m105 * x + b105
+fit f105(x) 'GAMMA2105.dat' using 6:1 via m105, b105
+f106(x) = m106 * x + b106
+fit f106(x) 'GAMMA2106.dat' using 6:1 via m106, b106
+f107(x) = m107 * x + b107
+fit f107(x) 'GAMMA2107.dat' using 6:1 via m107, b107
+f108(x) = m108 * x + b108
+fit f108(x) 'GAMMA2108.dat' using 6:1 via m108, b108
+f109(x) = m109 * x + b109
+fit f109(x) 'GAMMA2109.dat' using 6:1 via m109, b109
+f110(x) = m110 * x + b110
+fit f110(x) 'GAMMA2110.dat' using 6:1 via m110, b110
+f111(x) = m111 * x + b111
+fit f111(x) 'GAMMA2111.dat' using 6:1 via m111, b111
+f112(x) = m112 * x + b112
+fit f112(x) 'GAMMA2112.dat' using 6:1 via m112, b112
+f113(x) = m113 * x + b113
+fit f113(x) 'GAMMA2113.dat' using 6:1 via m113, b113
+f114(x) = m114 * x + b114
+fit f114(x) 'GAMMA2114.dat' using 6:1 via m114, b114
+f115(x) = m115 * x + b115
+fit f115(x) 'GAMMA2115.dat' using 6:1 via m115, b115
+f116(x) = m116 * x + b116
+fit f116(x) 'GAMMA2116.dat' using 6:1 via m116, b116
+f117(x) = m117 * x + b117
+fit f117(x) 'GAMMA2117.dat' using 6:1 via m117, b117
+f118(x) = m118 * x + b118
+fit f118(x) 'GAMMA2118.dat' using 6:1 via m118, b118
+f119(x) = m119 * x + b119
+fit f119(x) 'GAMMA2119.dat' using 6:1 via m119, b119
+f120(x) = m120 * x + b120
+fit f120(x) 'GAMMA2120.dat' using 6:1 via m120, b120
+f121(x) = m121 * x + b121
+fit f121(x) 'GAMMA2121.dat' using 6:1 via m121, b121
+f122(x) = m122 * x + b122
+fit f122(x) 'GAMMA2122.dat' using 6:1 via m122, b122
+f123(x) = m123 * x + b123
+fit f123(x) 'GAMMA2123.dat' using 6:1 via m123, b123
+f124(x) = m124 * x + b124
+fit f124(x) 'GAMMA2124.dat' using 6:1 via m124, b124
+f125(x) = m125 * x + b125
+fit f125(x) 'GAMMA2125.dat' using 6:1 via m125, b125
+f126(x) = m126 * x + b126
+fit f126(x) 'GAMMA2126.dat' using 6:1 via m126, b126
+f127(x) = m127 * x + b127
+fit f127(x) 'GAMMA2127.dat' using 6:1 via m127, b127
+f128(x) = m128 * x + b128
+fit f128(x) 'GAMMA2128.dat' using 6:1 via m128, b128
+f129(x) = m129 * x + b129
+fit f129(x) 'GAMMA2129.dat' using 6:1 via m129, b129
+f130(x) = m130 * x + b130
+fit f130(x) 'GAMMA2130.dat' using 6:1 via m130, b130
+f131(x) = m131 * x + b131
+fit f131(x) 'GAMMA2131.dat' using 6:1 via m131, b131
+f132(x) = m132 * x + b132
+fit f132(x) 'GAMMA2132.dat' using 6:1 via m132, b132
+f133(x) = m133 * x + b133
+fit f133(x) 'GAMMA2133.dat' using 6:1 via m133, b133
+f134(x) = m134 * x + b134
+fit f134(x) 'GAMMA2134.dat' using 6:1 via m134, b134
+f135(x) = m135 * x + b135
+fit f135(x) 'GAMMA2135.dat' using 6:1 via m135, b135
+f136(x) = m136 * x + b136
+fit f136(x) 'GAMMA2136.dat' using 6:1 via m136, b136
+f137(x) = m137 * x + b137
+fit f137(x) 'GAMMA2137.dat' using 6:1 via m137, b137
+f138(x) = m138 * x + b138
+fit f138(x) 'GAMMA2138.dat' using 6:1 via m138, b138
+f139(x) = m139 * x + b139
+fit f139(x) 'GAMMA2139.dat' using 6:1 via m139, b139
+f140(x) = m140 * x + b140
+fit f140(x) 'GAMMA2140.dat' using 6:1 via m140, b140
+f141(x) = m141 * x + b141
+fit f141(x) 'GAMMA2141.dat' using 6:1 via m141, b141
+f142(x) = m142 * x + b142
+fit f142(x) 'GAMMA2142.dat' using 6:1 via m142, b142
+f143(x) = m143 * x + b143
+fit f143(x) 'GAMMA2143.dat' using 6:1 via m143, b143
+f144(x) = m144 * x + b144
+fit f144(x) 'GAMMA2144.dat' using 6:1 via m144, b144
+f145(x) = m145 * x + b145
+fit f145(x) 'GAMMA2145.dat' using 6:1 via m145, b145
+f146(x) = m146 * x + b146
+fit f146(x) 'GAMMA2146.dat' using 6:1 via m146, b146
+f147(x) = m147 * x + b147
+fit f147(x) 'GAMMA2147.dat' using 6:1 via m147, b147
+f148(x) = m148 * x + b148
+fit f148(x) 'GAMMA2148.dat' using 6:1 via m148, b148
+f149(x) = m149 * x + b149
+fit f149(x) 'GAMMA2149.dat' using 6:1 via m149, b149
+f150(x) = m150 * x + b150
+fit f150(x) 'GAMMA2150.dat' using 6:1 via m150, b150
+f151(x) = m151 * x + b151
+fit f151(x) 'GAMMA2151.dat' using 6:1 via m151, b151
+f152(x) = m152 * x + b152
+fit f152(x) 'GAMMA2152.dat' using 6:1 via m152, b152
+f153(x) = m153 * x + b153
+fit f153(x) 'GAMMA2153.dat' using 6:1 via m153, b153
+f154(x) = m154 * x + b154
+fit f154(x) 'GAMMA2154.dat' using 6:1 via m154, b154
+f155(x) = m155 * x + b155
+fit f155(x) 'GAMMA2155.dat' using 6:1 via m155, b155
+f156(x) = m156 * x + b156
+fit f156(x) 'GAMMA2156.dat' using 6:1 via m156, b156
+f157(x) = m157 * x + b157
+fit f157(x) 'GAMMA2157.dat' using 6:1 via m157, b157
+f158(x) = m158 * x + b158
+fit f158(x) 'GAMMA2158.dat' using 6:1 via m158, b158
+f159(x) = m159 * x + b159
+fit f159(x) 'GAMMA2159.dat' using 6:1 via m159, b159
+f160(x) = m160 * x + b160
+fit f160(x) 'GAMMA2160.dat' using 6:1 via m160, b160
+f161(x) = m161 * x + b161
+fit f161(x) 'GAMMA2161.dat' using 6:1 via m161, b161
+f162(x) = m162 * x + b162
+fit f162(x) 'GAMMA2162.dat' using 6:1 via m162, b162
+f163(x) = m163 * x + b163
+fit f163(x) 'GAMMA2163.dat' using 6:1 via m163, b163
+f164(x) = m164 * x + b164
+fit f164(x) 'GAMMA2164.dat' using 6:1 via m164, b164
+f165(x) = m165 * x + b165
+fit f165(x) 'GAMMA2165.dat' using 6:1 via m165, b165
+f166(x) = m166 * x + b166
+fit f166(x) 'GAMMA2166.dat' using 6:1 via m166, b166
+f167(x) = m167 * x + b167
+fit f167(x) 'GAMMA2167.dat' using 6:1 via m167, b167
+f168(x) = m168 * x + b168
+fit f168(x) 'GAMMA2168.dat' using 6:1 via m168, b168
+f169(x) = m169 * x + b169
+fit f169(x) 'GAMMA2169.dat' using 6:1 via m169, b169
+f170(x) = m170 * x + b170
+fit f170(x) 'GAMMA2170.dat' using 6:1 via m170, b170
+f171(x) = m171 * x + b171
+fit f171(x) 'GAMMA2171.dat' using 6:1 via m171, b171
+f172(x) = m172 * x + b172
+fit f172(x) 'GAMMA2172.dat' using 6:1 via m172, b172
+f173(x) = m173 * x + b173
+fit f173(x) 'GAMMA2173.dat' using 6:1 via m173, b173
+f174(x) = m174 * x + b174
+fit f174(x) 'GAMMA2174.dat' using 6:1 via m174, b174
+f175(x) = m175 * x + b175
+fit f175(x) 'GAMMA2175.dat' using 6:1 via m175, b175
+f176(x) = m176 * x + b176
+fit f176(x) 'GAMMA2176.dat' using 6:1 via m176, b176
+f177(x) = m177 * x + b177
+fit f177(x) 'GAMMA2177.dat' using 6:1 via m177, b177
+f178(x) = m178 * x + b178
+fit f178(x) 'GAMMA2178.dat' using 6:1 via m178, b178
+f179(x) = m179 * x + b179
+fit f179(x) 'GAMMA2179.dat' using 6:1 via m179, b179
+f180(x) = m180 * x + b180
+fit f180(x) 'GAMMA2180.dat' using 6:1 via m180, b180
+f181(x) = m181 * x + b181
+fit f181(x) 'GAMMA2181.dat' using 6:1 via m181, b181
+f182(x) = m182 * x + b182
+fit f182(x) 'GAMMA2182.dat' using 6:1 via m182, b182
+f183(x) = m183 * x + b183
+fit f183(x) 'GAMMA2183.dat' using 6:1 via m183, b183
+f184(x) = m184 * x + b184
+fit f184(x) 'GAMMA2184.dat' using 6:1 via m184, b184
+f185(x) = m185 * x + b185
+fit f185(x) 'GAMMA2185.dat' using 6:1 via m185, b185
+f186(x) = m186 * x + b186
+fit f186(x) 'GAMMA2186.dat' using 6:1 via m186, b186
+f187(x) = m187 * x + b187
+fit f187(x) 'GAMMA2187.dat' using 6:1 via m187, b187
+f188(x) = m188 * x + b188
+fit f188(x) 'GAMMA2188.dat' using 6:1 via m188, b188
+f189(x) = m189 * x + b189
+fit f189(x) 'GAMMA2189.dat' using 6:1 via m189, b189
+f190(x) = m190 * x + b190
+fit f190(x) 'GAMMA2190.dat' using 6:1 via m190, b190
+f191(x) = m191 * x + b191
+fit f191(x) 'GAMMA2191.dat' using 6:1 via m191, b191
+f192(x) = m192 * x + b192
+fit f192(x) 'GAMMA2192.dat' using 6:1 via m192, b192
+f193(x) = m193 * x + b193
+fit f193(x) 'GAMMA2193.dat' using 6:1 via m193, b193
+f194(x) = m194 * x + b194
+fit f194(x) 'GAMMA2194.dat' using 6:1 via m194, b194
+f195(x) = m195 * x + b195
+fit f195(x) 'GAMMA2195.dat' using 6:1 via m195, b195
+f196(x) = m196 * x + b196
+fit f196(x) 'GAMMA2196.dat' using 6:1 via m196, b196
+f197(x) = m197 * x + b197
+fit f197(x) 'GAMMA2197.dat' using 6:1 via m197, b197
+f198(x) = m198 * x + b198
+fit f198(x) 'GAMMA2198.dat' using 6:1 via m198, b198
+f199(x) = m199 * x + b199
+fit f199(x) 'GAMMA2199.dat' using 6:1 via m199, b199
+set print 'alphaValsGamma2.dat'
+print m0, m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16, m17, m18, m19, m20, m21, m22, m23, m24, m25, m26, m27, m28, m29, m30, m31, m32, m33, m34, m35, m36, m37, m38, m39, m40, m41, m42, m43, m44, m45, m46, m47, m48, m49, m50, m51, m52, m53, m54, m55, m56, m57, m58, m59, m60, m61, m62, m63, m64, m65, m66, m67, m68, m69, m70, m71, m72, m73, m74, m75, m76, m77, m78, m79, m80, m81, m82, m83, m84, m85, m86, m87, m88, m89, m90, m91, m92, m93, m94, m95, m96, m97, m98, m99, m100, m101, m102, m103, m104, m105, m106, m107, m108, m109, m110, m111, m112, m113, m114, m115, m116, m117, m118, m119, m120, m121, m122, m123, m124, m125, m126, m127, m128, m129, m130, m131, m132, m133, m134, m135, m136, m137, m138, m139, m140, m141, m142, m143, m144, m145, m146, m147, m148, m149, m150, m151, m152, m153, m154, m155, m156, m157, m158, m159, m160, m161, m162, m163, m164, m165, m166, m167, m168, m169, m170, m171, m172, m173, m174, m175, m176, m177, m178, m179, m180, m181, m182, m183, m184, m185, m186, m187, m188, m189, m190, m191, m192, m193, m194, m195, m196, m197, m198, m199, 

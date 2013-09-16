@@ -1,0 +1,41 @@
+# sample3.ode
+# Post Inhibitory rebound in mutually coupled
+# FitzHugh-Nagumo cells.
+
+# gsyn=2 gives suppressed, gsyn=.5 gives pir
+
+# Parameter values. It's always better to give constants
+# as parameters so you can change them without exiting
+# XPP.
+p vSpike=-1, eps=.2, gsyn=.5, theta=-.2,scale=10
+p wshift=3.8, vshift=0, scale2=10
+p alpha=1, beta=.1, vstart=0, wstart=0, vsyn=-2
+
+# Usually we talk of the FitzHugh-Nagumo model with
+# f and g somewhat arbitrary, but to do numerics we
+# need to pick specific functions.
+f(a,b)=-b-15*(a-1)*a*(a+1)
+g(a,b)=-b+scale*tanh(a*scale2)+wshift
+
+# the slow system (equation) and the synapse obey
+# the same rules for both neurons, so we use this array
+# notation. The first line denotes the range of j (always
+# j) and v[j] denotes the j'th v value, etc...
+%[1..2]
+w[j]'=eps*g(v[j],w[j])
+s[j]'=alpha*(1-s[j])*(v[j]>theta)-beta*s[j]
+%
+
+# cell 1 receives input from 2 and 2 from 1, so we write
+# these seperately since they are different
+v1'=f(v1,w1)-gsyn*(v1-vsyn)*s2
+v2'=f(v2,w2)-gsyn*(v2-vsyn)*s1
+
+# initial conditions. Since I don't specify s values,
+# they start at 0.
+i v1=0, w1=-5, v2=-1, w2=-2
+
+# configure XPP's options.
+@ total=100, xlo=0, xhi=100, ylo=-1.5, yhi=1.5
+@ nplot=2, xp[1..2]=t, yp[j]=v[j]
+done 

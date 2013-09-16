@@ -1,0 +1,9 @@
+set terminal postscript eps color enhanced
+set xl "K"
+set yl "{/Symbol m}"
+set zl "c"
+set zr[0:0.035]
+set view 64, 208
+set dgrid3d
+set output "cGridGammas.eps"
+splot "cGridGAMMA2.dat" using 2:3:1 with lines t "{/Symbol g} = 2",  "cGridGAMMA4.dat" using 2:3:1 with lines t "{/Symbol g} = 4", "cGridGAMMA6.dat" using 2:3:1 with lines t "{/Symbol g} = 6"

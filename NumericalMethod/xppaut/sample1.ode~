@@ -1,0 +1,6 @@
+# sample1.ode
+dx1/dt=x2
+dx2/dt=5/2*(x2)-1/2*x1
+x1(0)=6
+x2(0)=-1
+done 

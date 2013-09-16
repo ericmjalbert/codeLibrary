@@ -1,0 +1,127 @@
+/*****
+ *
+ *  Sparse matrix multipled with a vector
+ *  
+ *  Takes a sparse matrix and multiplies it with a vector
+ *  
+ *  Author:         Eric Jalbert
+ *  Date Started:   June 20th, 2013
+ *  Date Modified:  July 4th, 2013
+ *  
+ *****/ 
+
+#include "sparseMulti.h"
+#include "list.h"
+ 
+int ** genSparseMatrix()
+{
+  int i = 0;
+  int j = 0;
+  int ** matrix = NULL;
+  srand(time(0));
+  
+  /* malloc memory for the matrix entries */
+  matrix = malloc(SIZE * sizeof **matrix);
+  for(i = 0; i < SIZE; i++)
+  {
+    matrix[i] = malloc(SIZE * sizeof *matrix);
+  }
+    
+  for(i = 0; i < SIZE; i++)
+  { 
+    for(j = 0; j < SIZE; j++)
+    {
+      if(rand()%20 > 0)
+        matrix[i][j] = 0;
+      else
+        matrix[i][j] = rand()%10;
+    } 
+  }
+	
+    return matrix;
+}
+
+
+
+int * genVector()
+{
+  int i;
+  int * vector = NULL;
+  srand(time(0));
+  
+  vector = malloc(SIZE * sizeof *vector);
+
+  for(i = 0; i < SIZE; i++)
+  {
+    vector[i] = rand()%10;
+  }
+
+  return vector;
+}
+
+
+node * convertMatrix(int ** matrix)
+{
+  node * newMatrix = NULL;
+  Sparse * newElement = NULL;
+  int i,j;
+  int count = 0;
+  
+  for(i = 0; i < SIZE; i++)
+    for(j = 0; j < SIZE; j++)
+    {
+      if(matrix[i][j] != 0)
+      {
+        newElement = malloc(sizeof *newElement);
+        newElement->element->value = matrix[i][j];
+        newElement->element->row = i;
+        newElement->element->col = j;
+        newMatrix = addFront (newMatrix, newElement);
+      }
+    }
+    
+  return newMatrix;
+}
+
+
+int printMatrix(int ** matrix)
+{
+  int i, j;
+		for(i = 0; i < SIZE; i++)
+		{
+			for(j = 0; j < SIZE; j++)
+			{
+				printf("%d ", matrix[i][j]);
+			}
+			printf("\n");
+		}
+		
+		return 0;
+}
+
+
+
+int printVector(int * vector)
+{
+  int i;
+  for(i = 0; i < SIZE; i++)
+    printf("%d \n", vector[i]);
+    
+  return 0;
+}
+
+
+
+int ** matrixTimesVector(int ** matrix, int * vector)
+{
+return NULL;
+}
+
+
+
+int ** sparseTimesVector(Sparse matrix, int * vector);
+
+
+
+
+

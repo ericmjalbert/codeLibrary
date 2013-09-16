@@ -1,0 +1,7 @@
+#paramaters, alpha>1, beta>0
+p delta=1 alpha=2 beta=2
+p c=1
+
+#functions
+d(m)=delta*m^alpha*(1-m)^(-beta)
+f(m)=1

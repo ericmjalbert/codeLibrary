@@ -1,0 +1,11 @@
+/*****
+ *
+ *  Sparse matrix multipled with a vector
+ *  
+ *  Takes a sparse matrix and multiplies it with a vector
+ *  
+ *  Author:         Eric Jalbert
+ *  Date Started:   June 20th, 2013
+ *  Date Modified:  June 20th, 2013
+ *  
+ *****/ 

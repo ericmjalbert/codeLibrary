@@ -1,0 +1,57 @@
+/*****
+ *
+ *  Sparse matrix multipled with a vector
+ *  
+ *  Takes a sparse matrix and multiplies it with a vector
+ *  
+ *  Author:         Eric Jalbert
+ *  Date Started:   June 20th, 2013
+ *  Date Modified:  June 20th, 2013
+ *  
+ *****/ 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
+
+#define SIZE 40
+
+int main()
+{
+    int i = 0;
+    int j = 0;
+    int ** matrix = NULL;
+    
+    srand(time(NULL));
+    
+    matrix = malloc(sizeof(int*)*SIZE);
+    for(j = 0; j < SIZE; j++)
+    {
+    matrix[j] = malloc(sizeof(int) * SIZE);
+    
+    for(i = 0; i < SIZE; i++)
+        {
+        if(rand()%50 > 2)
+            matrix[j][i] = 0;
+        else
+            matrix[j][i] = rand()%10;
+        }
+    }
+
+		for(i = 0; i < SIZE; i++)
+		{
+			for(j = 0; j < SIZE; j++)
+			{
+				printf("%d ", matrix[j][i]);
+			}
+			printf("\n");
+		}
+	
+    return 0;
+
+}
+
+
+
+

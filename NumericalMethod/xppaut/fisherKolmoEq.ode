@@ -1,0 +1,5 @@
+u'=v
+v'=-c*v-u*(1-u)
+par c
+@ xp=u,yp=v,xhi=1.5,yhi=1,xlo=-.5,ylo=-1
+done

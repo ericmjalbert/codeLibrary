@@ -1,0 +1,25 @@
+#Biofilm model biomass density equation...
+#paramaters, alpha>1, beta>1
+p delta=1e-8 alpha=4 beta=4
+p epsilon=0.01
+p k=0.95
+p c=0.082
+
+#functions, note e(u) is the regularization of d(u)
+#           and p(u) is the derivative of d(u)
+d(u)=delta*u^alpha*(1-u)^(-beta)
+e(u)=delta*(u+epsilon)^alpha*(1-u)^(-beta)
+p(u)=delta*u^(alpha-1)*(alpha*(1-u)+beta*u)*(1-u)^(-beta-1)
+f(u)=(1-(u/k)^alpha)*u
+
+#u'=v
+#v'=(-c*v-f(u)-p(u)*v^2)/d(u)
+#or with v=D(u)*u'
+#u'=v/d(u)
+#v'=-c*v/d(u)-f(u)
+#or using the new variable zeta
+u'=d(u)*v
+v'=-c*v-p(u)*v^2-f(u)
+
+@ xp=u, yp=v, xhi=1.01 xlo=0, yhi=0.7, ylo=-7
+done

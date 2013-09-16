@@ -1,0 +1,9 @@
+set terminal postscript eps color enhanced
+set xl "K"
+set yl "{/Symbol m}"
+set zl "c_{crit}"
+set xr[0.93:0.97]
+set yr[3:8]
+set view 52, 238
+set output "cCritGridRestrict.eps"
+splot "gridValues4.dat" with lines t "{/Symbol g} = 4"

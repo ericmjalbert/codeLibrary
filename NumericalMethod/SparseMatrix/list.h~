@@ -1,0 +1,25 @@
+/*
+ *  Name  : Eric Jalbert
+ *  Number: 0712946
+ *  Comments: This is the header file of my list ADT.
+ *  Time of Last Edit: July 4, 2013
+ */
+
+#include"../sparseMulti.h"
+
+struct newMatrixList
+{
+  Sparse * element;
+  struct newMatrixFormat * next;
+};
+typedef struct newMatrixList node;
+
+
+node *createList (node *dummyNode);
+void *destroyList (node *head);
+node *createNode(Sparse * num);
+node *addFront(node *head, Sparse * num);
+int getFront(node *head);
+node *removeFront(node *head);
+void printList(node *head);
+

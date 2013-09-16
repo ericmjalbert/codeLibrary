@@ -1,0 +1,17 @@
+set terminal postscript eps color enhanced
+set title '{/Symbol g} = 4'
+set yl "c"
+set xl "c_{crit}"
+set xr [0:]
+set yr [0:]
+set output "cCompare4.eps"
+set key top left
+f1(x) = m1*x + b1
+f2(x) = m2*x + b2
+f3(x) = m3*x + b3
+f4(x) = m4*x + b4
+fit f1(x) 'GAMMA4000.dat' using 6:1 via m1,b1
+fit f2(x) 'GAMMA4001.dat' using 6:1 via m2,b2
+fit f3(x) 'GAMMA4002.dat' using 6:1 via m3,b3
+fit f4(x) 'GAMMA4003.dat' using 6:1 via m4,b4
+plot  'GAMMA4000.dat' using 6:1 t 'K = 0.94', f1(x) lc 1, 'GAMMA4001.dat' using 6:1 t 'K = 0.95' lc 2, f2(x) lc 2, 'GAMMA4002.dat' using 6:1 t 'K = 0.96' lc 3, f3(x) lc 3, 'GAMMA4003.dat' using 6:1 t 'K = 0.97' lc 4, f4(x) lc 4
